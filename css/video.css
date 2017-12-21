@@ -1,0 +1,73 @@
+.more1{
+			height: 135px;
+		    width: 30px;
+		    position: absolute;
+		    right: 21.6%;
+		    top: 68px;
+		    text-align: center;
+		    line-height: 150%;
+		    background: url(../images/more.png) no-repeat center 103px;
+		    background-size: 60%;
+		    cursor: pointer;
+		}
+		.v{
+			width: 18%;
+		    height: 142px;
+		    float: left;
+		    margin-right: 2%;
+		    position: relative;
+		    margin-bottom: 2.5%;
+		}
+		.v:last-child{margin-right: 0}
+		.zb1{
+			position: absolute;
+			left: 0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			cursor: pointer;
+
+		}
+		.bg2{
+			width:100%;
+			height: 30px;
+			position: absolute;
+			left: 0%;
+			bottom:0%;
+			background-color: rgba(0,0,0,0.5);
+		}
+		.zt1{
+			position: absolute;
+			left: 5%;
+			top:5px;
+			color: #fff;
+			white-space:nowrap; 
+			text-overflow:ellipsis;
+			overflow:hidden;
+			width: 95%;
+
+		}
+		.title3{
+			width: 57%;
+			    height: 50px;
+			    line-height: 50px;
+			    background: url(../images/video.png) no-repeat 2% center;
+			    box-sizing: border-box;
+			    padding-left: 3.5%;
+			    margin: 30px auto;
+			    border-bottom: 1px solid #2FB3FF;
+			    background-color: #fff;
+			    margin-bottom: 16px;
+			    -webkit-background-size: 35px;
+			    background-size: 35px;
+		}
+		.mask{
+			display: none;
+			width:100%;
+			height:100%;
+			position: fixed;
+			left: 0px;
+			top:0px;
+			background-color: rgba(0,0,0,0.5);
+			z-index: 999; 
+		}

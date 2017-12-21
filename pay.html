@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购买会员—鲲鹏爱乐</title>
+	<link rel="stylesheet" href="./css/resect.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		body,.main{background-color: #f5f5f5;}
+		.main{
+			position: relative;
+			height: 700px;
+		}
+		.pay_title{
+			position: relative;
+			width:100%;
+			height: 80px;
+			margin:20px 0px;
+		}
+		.text{
+			height: 50px;
+			line-height: 50px;
+			font-size: 24px;
+			color: #000;
+			text-align: left;
+			box-sizing: border-box;
+			position: absolute;
+			left: 0px;
+			top:0px;
+			margin-top: 20px;
+		}
+		.ifvip{
+			height: 50px;
+			line-height: 50px;
+			font-size: 24px;
+			color: #e4393c;
+			text-align: center;
+			position: absolute;
+			left: 200px;
+			top:20px;
+		}
+		.pay_main{
+			width:100%;
+			height: 600px;
+			background-color: #fff;
+			margin-top: 20px;
+			position: relative;
+			border:1px solid #ddd;
+		}
+		.pay_images{
+			position: absolute;
+			left:50px;
+			top:20px;
+			width:128px;
+			height:128px;
+			background: url(images/zxcz.png) no-repeat center center ;
+			-webkit-background-size: 100% 100%;
+			background-size: 100% 100%;
+		}
+		.pay_main_title{
+			position: absolute;
+			left: 240px;
+			top:40px;
+			font-size:20px;
+			color: #000;
+			font-weight:bold;
+		}
+		.pay_time{
+			position: absolute;
+			left: 240px;
+			top:120px;
+			font-size: 16px;
+			color:#949694;
+		}
+		.price_desc{
+			position: absolute;
+			left: 240px;
+			top:80px;
+			font-size: 16px;
+			color:#424141;
+		}
+		.price{
+			position: absolute;
+			right: 50px;
+			top:80px;
+			font-size: 22px;
+			font-weight: bold;
+			color:#000;
+		}
+		.line{
+			width: 950px;
+		    height: 1px;
+		    background-color: #ddd;
+		    position: absolute;
+		    left: 50px;
+		    top: 190px;
+		}
+		.pay{
+			width:100%;
+			height:100px;
+			position: absolute;
+			left: 0px;
+			top:200px;
+		}
+		.choose{
+			position: absolute;
+			left: 50px;
+			top:20px;
+			font-size: 16px;
+			color: #000;
+
+		}
+		.wx{
+			width:270px;
+			height: 64px;
+			background:url(images/wx2.png) no-repeat center center ;
+			position: absolute;
+			top:80px;
+			left:50px;
+			-webkit-background-size: 50% !important;
+			background-size: 50% !important;
+			border:2px solid #79C38D;
+			cursor: pointer;
+		}
+		.alipay{
+			width: 270px;
+			height: 64px;
+			background: url(images/alipay.png) no-repeat center center;
+			position: absolute;
+			top:80px;
+			left:370px;
+			-webkit-background-size: 30% !important;
+			background-size: 30% !important;
+			border:2px solid #ddd;
+			cursor: pointer;
+		}
+		.line1{
+			width: 950px;
+		    height: 1px;
+		    background-color: #ddd;
+		    position: absolute;
+		    left: 50px;
+		    top:400px;
+		}
+		.order{
+			width:100%;
+			position: absolute;
+			left: 0px;
+			top: 430px;
+		}
+		.sj{
+			width:100%;
+			height: 50px;
+			line-height: 50px;
+			font-size: 20px;
+			color: #000;
+			text-align: right;
+			padding-right: 50px;
+			box-sizing: border-box;
+		}
+		.sj span:last-child{
+			color:#f95622;
+		}
+		.btn1{
+			position: absolute;
+			right: 60px;
+			top:60px;
+			background-color: #fd8431;
+			height: 50px;
+			width: 150px;
+			line-height: 50px;
+			color: #fff;
+			border-radius:10px;
+			font-size: 20px;
+			text-align: center;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<iframe src="header.html" width="100%" height="200px"></iframe>
+	<div id="main">
+		<div class="main">
+			<div class="pay_title">
+				<div class="text">支付中心</div>
+				<div class="ifvip">
+					<div class="novip"></div>
+					<div class="isvip"></div>
+				</div>
+			</div>
+			<div class="pay_main">
+				<div class="pay_main_title">VIP服务购买</div>
+				<div class="pay_images"></div>
+				<div class="price_desc"></div>
+				<div class="pay_time"></div>
+				<div class="price"></div>
+				<div class="line"></div>
+				<div class="pay">
+					<div class="choose">选择支付方式</div>
+					<div class="wx"></div>
+					<div class="alipay"></div>
+				</div>
+				<div class="line1"></div>
+				<div class="order">
+					<div class="sj">
+						<span>实际支付金额: ¥</span>
+						<span></span>
+					</div>
+					<div class="btn1">去支付</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer style="overflow:hidden">
+		<div class="main1" style="background-color:#424141">
+			<div class="f_l">
+				<div class="gn">功能</div>
+				<div class="gk">购买课程</div>
+				<div class="ck">查看课程表</div>
+				<div class="jl">讲师列表</div>
+			</div>
+			<div class="f_l">
+				<div class="gn">服务</div>
+				<div class="gk">收费说明</div>
+				<div class="ck">用户注册使用协议</div>
+				<div class="jl">讲师注册使用协议</div>
+			</div>
+			<div class="f_l">
+				<div class="gn">联系我们</div>
+				<div class="gk">办公地址XXXXXX</div>
+				<div class="ck">联系电话XXXXXX</div>
+				<div class="jl">服务邮箱XXXXXX</div>
+			</div>
+		</div>
+		<div class="ic">ICP备案XXXXXXXXXX</div>
+		<div class="bq">鲲鹏爱乐©版权所有</div>
+	</footer>
+	<script type="text/javascript">
+		sessionStorage.setItem("payment","1");
+		var token=sessionStorage.getItem('aWebtoken');
+		$.ajax({
+			url:'http://47.94.251.233:8080/saxophone/saxo/seachrecharge?webtoken='+token,
+			dataType:'jsonp',  
+        	jsonp:'callback', 
+			async:false,
+			success: function(res){
+				console.log(res);
+				if (res.code==100000) {
+					sessionStorage.setItem("payId",res.data[0].aId);
+					$(".price_desc")[0].innerText=res.data[0].aDiscript;
+					$(".price")[0].innerText="¥ "+res.data[0].aMoney;
+					$(".sj span:last-child")[0].innerText=res.data[0].aMoney;
+					$(".pay_time")[0].innerText="会员有效期"+res.data[0].aTime;
+				}else{
+					alert(res.message);
+				}		
+			},
+		})
+		var aIfmember=sessionStorage.getItem("aIfmember");
+		var aEndtime=sessionStorage.getItem("aEndtime");
+		if(aIfmember==0){
+			$(".novip").show();
+			$(".isvip").hide();
+			$(".novip")[0].innerText="您还不是会员，如需更多服务，请充值"
+		}else if(aIfmember==1){
+			$(".novip").hide();
+			$(".isvip").show();
+			$(".isvip")[0].innerTex="会员有效期截止到："+aEndtime;	
+		}
+		$(".wx").click(function(){
+			// http://192.168.10.141:8080/saxophone/saxo/setOrder?webtoken=9B044E4DC5FC8E035AB6A19167F18755&aid=2&payment=1
+			$(".wx").css("border","2px solid #79C38D");
+			$(".alipay").css("border","2px solid #ddd");
+			sessionStorage.setItem("payment","1");
+			
+		})
+		$(".alipay").click(function(){
+			// http://192.168.10.141:8080/saxophone/saxo/setOrder?webtoken=9B044E4DC5FC8E035AB6A19167F18755&aid=2&payment=1
+			$(".wx").css("border","2px solid #ddd");
+			$(".alipay").css("border","2px solid #79C38D");
+			sessionStorage.setItem("payment","2");
+		})
+		$(".btn1").click(function(){
+			if(token==null){
+				alert("请登录后购买");
+			}else{
+				var aid=sessionStorage.getItem("payId");
+				var payment=sessionStorage.getItem("payment");
+				$.ajax({
+					url:"http://47.94.251.233:8080/saxophone/saxo/setOrder?webtoken="+token+"&aid="+aid+"&payment="+payment,
+					dataType:'jsonp',  
+		        	jsonp:'callback', 
+					async:false,
+					success: function(res){
+						console.log(res);
+						if (res.code==100000) {
+							
+						}else{
+							alert(res.message);
+						}		
+					},
+				})
+			}
+			
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页</title>
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="assets/i/2.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script>
+        //获取浏览器页面可见高度和宽度
+        var _PageHeight = document.documentElement.clientHeight,
+                _PageWidth = document.documentElement.clientWidth;
+        //计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
+        var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
+                _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
+        //在页面未加载完毕之前显示的loading Html自定义内容
+        var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:' + _PageHeight + 'px;top:0;background:#f3f8ff;opacity:0.8;filter:alpha(opacity=80);z-index:10000;"><div style="position: absolute; cursor1: wait; left: ' + _LoadingLeft + 'px; top:' + _LoadingTop + 'px; width: auto; height: 57px; line-height: 57px; padding-left: 5px; padding-right: 5px; border:none; color: #696969; font-family:\'Microsoft YaHei\';">数据加载中，请稍后...</div></div>';
+        //呈现loading效果
+        document.write(_LoadingHtml);
+
+        //window.onload = function () {
+        //    var loadingMask = document.getElementById('loadingDiv');
+        //    loadingMask.parentNode.removeChild(loadingMask);
+        //};
+
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                var loadingMask = document.getElementById('loadingDiv');
+                loadingMask.parentNode.removeChild(loadingMask);
+            }
+        }
+    </script>
+</head>
+<body data-type="generalComponents">
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <a href="" class="tpl-logo">
+            <img src="assets/image/logo.png" alt="">
+        </a>
+    </div>
+    <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+            <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                    <span class="tpl-header-list-user-nick">管理员小王</span>
+                        <span class="tpl-header-list-user-ico">
+                            <img src="assets/image/user01.png">
+                        </span>
+                </a>
+                <ul class="am-dropdown-content">
+                    <!--<li><a href="#"><span class="am-icon-user"></span> 资料</a></li>-->
+                    <!--<li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>-->
+                    <li><a href="index.html"><span class="am-icon-power-off"></span> 退出</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="tpl-page-container tpl-page-header-fixed">
+    <div class="tpl-left-nav tpl-left-nav-hover">
+        <div class="tpl-left-nav-title">
+            管理列表
+        </div>
+        <div class="tpl-left-nav-list">
+            <ul class="tpl-left-nav-menu">
+                <li class="tpl-left-nav-item">
+                    <a href="shouye.html" class="nav-link active">
+                        <i class="am-icon-home"></i>
+                        <span>首页管理</span>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-leanpub"></i>
+                        <span>讲师管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="teach-pass-aduit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>讲师列表</span>
+                            </a>
+                            <a href="teach-not-pass.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未通过</span>
+                            </a>
+                            <a href="to-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>待审核</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-table"></i>
+                        <span>课程管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="courses-pass-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>审核通过课程</span>
+                            </a>
+                            <a href="courses-not-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未通过审核课程</span>
+                            </a>
+                            <a href="courses-to-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未审核课程</span>
+                            </a>
+                            <a href="courses-manage.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>课程签到统计</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-shopping-bag"></i>
+                        <span>付费管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="set-pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>付费价格设置</span>
+                            </a>
+                            <a href="pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>付费订单管理</span>
+                            </a>
+                            <a href="complete-pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>支付完成订单</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="tpl-content-wrapper">
+        <div class="tpl-content-page-title">
+            首页设置
+        </div>
+        <div class="tpl-portlet-components">
+            <div class="tpl-block">
+                <div class="row">
+                    <div class="am-g am-u-lg-12 am-u-md-12 am-u-sm-12">
+                        <div class="am-u-sm-12">
+                            <div id="box"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px;height: 50px">
+                    <div id="add">
+                        <button class="am-btn-success" data-am-modal="{target:'#my-alert2'}" onclick="addVideo('1')">添加推荐视频</button>
+                        <button class="am-btn-success" data-am-modal="{target:'#my-alert2'}" onclick="addVideo('2')">添加优秀视频</button>
+                        <div class="am-modal am-modal-prompt" tabindex="-1" id="my-alert2">
+                            <div class="am-modal-dialog" style="margin-top: 80px">
+                                <!--<div class="am-modal-hd">写点理由吧，你都拒绝别人了</div>-->
+                                <div class="am-modal-bd" id="alter-model2">
+                                    <p>优秀讲师：</p>
+                                    <!--<input type="text" placeholder="输入修改的视频名称"/>-->
+                                    <select name="" id="select" style="margin-top: 23px">
+                                        <option value="1" selected>请选择</option>
+                                    </select>
+                                    <p>讲师视频：</p>
+                                    <!--<input type="text" placeholder="输入修改的视频名称"/>-->
+                                    <select name="" id="select1" style="margin-top: 23px">
+                                        <option value="1" selected>选择讲师后请等待加载</option>
+                                    </select>
+                                    <button class="am-btn-success" id="turn-on" style="width: 85px;height: 30px;margin-right: 47px">预览视频</button>
+                                        <!--<div class="am-modal am-modal-prompt" tabindex="-1" id="my-alert3">-->
+                                            <!--<div class="am-modal-dialog">-->
+                                                <!--&lt;!&ndash;<div class="am-modal-hd">写点理由吧，你都拒绝别人了</div>&ndash;&gt;-->
+                                                <!--<div class="am-modal-bd">-->
+                                                    <!--<p>解放路数控技术拉克丝记录时</p>-->
+                                                <!--</div>-->
+                                                <!--<div class="am-modal-footer">-->
+                                                    <!--<span class="am-modal-btn" data-am-modal-cancel style="margin-top: 33px">取消</span>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <p>视频名称：</p>
+                                    <input type="text" placeholder="输入视频名称" id="video-name"/>
+                                    <p>视频描述：</p>
+                                    <textarea name="" id="video-describe" cols="30" rows="5" placeholder="输入视频描述" style="margin-top: 30px"></textarea>
+                                    <p>视频封面(300*200图片)</p>
+                                    <div class="am-u-sm-12">
+                                        <div class="group-ipt img">
+                                            <img src="" id="src" class="src" style="width: 500px;height: 200px;margin-left: -5px">
+                                        </div>
+                                        <form class="group-ipt email">
+                                            <input type="file" name="file" id="file" class="ipt demo1" placeholder="上传封面">
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="am-modal-footer">
+                                    <span class="am-modal-btn" id="submit-video2" style="margin-top: 33px">提交</span>
+                                    <span class="am-modal-btn" data-am-modal-cancel style="margin-top: 33px">取消</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div style="background-color: #FFFFFF;color: #697882;padding-top: 15px">推荐视频</div>
+                    <ul class="tpl-task-list" id="excellence">
+                        <div class="modal fade" id="myDs1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" style="margin-top: 100px">
+                                    <div class="modal-header" id="model-qi2">视频信息修改</div>
+                                    <div class="modal-body">
+                                        <p>视频名称：</p>
+                                        <input type="text" placeholder="输入修改的视频名称" id="mo-name" style="width: 500px"/>
+                                        <!--<p>视频封面：</p>-->
+                                        <!--<input type="text" placeholder="输入修改的视频名称"/>-->
+                                        <p>视频描述：</p>
+                                        <textarea name="" id="mo-describe" cols="30" rows="5" placeholder="输入修改的视频描述" style="width: 500px"></textarea>
+                                        <p>视频封面(300*200图片)</p>
+                                        <div class="am-u-sm-12">
+                                            <div class="group-ipt img1" id="img1">
+
+                                            </div>
+                                            <form class="group-ipt email">
+                                                <input type="file" name="file" id="file1" class="ipt demo1" placeholder="上传头像">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer" style="border-top: none">
+                                        <span class="am-modal-btn" data-dismiss="modal" id="submit-video">确认设置</span>
+                                        <span class="am-modal-btn"  data-dismiss="modal">取消</span>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+                        <!--<li>-->
+                            <!--<div class="am-u-md-2">-->
+                                <!--<img src="assets/image/a4.jpg" alt="" style="width: 145px"/>-->
+                            <!--</div>-->
+                            <!--<div class="am-u-md-8 video-introduce">-->
+                                <!--<span class="label label-sm label-success"> 标题：推荐视频1</span>-->
+                                <!--<span class="label label-sm label-success">讲师：讲师1</span>-->
+                                <!--<span class="label label-sm label-success"> 上传日期：2017-09-04</span>-->
+                                <!--<span class="label label-sm label-success">视频介绍：两款手机山梨酸钾就付老师介绍设计师困了就睡看了</span>-->
+                            <!--</div>-->
+                            <!--<div class="am-u-md-2 video-op">-->
+                                <!--<button class="am-btn-success" data-am-modal="{target:'#my-alert'}">修改</button>-->
+                                <!--<button class="am-btn-danger">删除</button>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    </ul>
+                    <div style="background-color: #FFFFFF;color: #697882;padding-top: 15px">优秀视频</div>
+                    <ul class="tpl-task-list" id="recommended">
+                        <!--<li>-->
+                            <!--<div class="am-u-md-2">-->
+                                <!--<img src="assets/image/a4.jpg" alt="" style="width: 145px"/>-->
+                            <!--</div>-->
+                            <!--<div class="am-u-md-8 video-introduce">-->
+                                <!--<span class="label label-sm label-success"> 标题：推荐视频1</span>-->
+                                <!--<span class="label label-sm label-success">讲师：讲师1</span>-->
+                                <!--<span class="label label-sm label-success"> 日期：2017-09-04</span>-->
+                                <!--<span class="label label-sm label-success">视频介绍：两款手机山梨酸钾就付老师介绍设计师困了就睡看了</span>-->
+                            <!--</div>-->
+                            <!--<div class="am-u-md-2 video-op">-->
+                                <!--<button class="am-btn-success" data-am-modal="{target:'#my-alert'}">修改</button>-->
+                                <!--<button class="am-btn-danger">删除</button>-->
+                            <!--</div>-->
+                        <!--</li>-->
+
+                    </ul>
+                </div>
+            </div>
+            <div class="tpl-alert"></div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/iscroll.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/set-index.js"></script>
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+//    $("#index-submit").click(function(){
+//        var mySelect=document.getElementById("teach");
+//        var index1=mySelect.selectedIndex;
+//        var op1=mySelect.options[index1].value;
+//        console.log(op1);
+//    });
+</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>付费订单查询</title>
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="assets/i/2.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/table.css"/>
+    <style>
+        #spanPre{
+            background-color: #5eb95e;
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 3px;
+            color: #fff;
+        }
+        #spanNext{
+            background-color: #5eb95e;
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 3px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body data-type="generalComponents">
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <a href="" class="tpl-logo">
+            <img src="assets/image/logo.png" alt="">
+        </a>
+    </div>
+    <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+            <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                    <span class="tpl-header-list-user-nick">管理员小王</span>
+                        <span class="tpl-header-list-user-ico">
+                            <img src="assets/image/user01.png">
+                        </span>
+                </a>
+                <ul class="am-dropdown-content">
+                    <!--<li><a href="#"><span class="am-icon-user"></span> 资料</a></li>-->
+                    <!--<li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>-->
+                    <li><a href="index.html"><span class="am-icon-power-off"></span> 退出</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="tpl-page-container tpl-page-header-fixed">
+    <div class="tpl-left-nav tpl-left-nav-hover">
+        <div class="tpl-left-nav-title">
+            管理列表
+        </div>
+        <div class="tpl-left-nav-list">
+            <ul class="tpl-left-nav-menu">
+                <li class="tpl-left-nav-item">
+                    <a href="shouye.html" class="nav-link">
+                        <i class="am-icon-home"></i>
+                        <span>首页管理</span>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-leanpub"></i>
+                        <span>讲师管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="teach-pass-aduit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>讲师列表</span>
+                            </a>
+                            <a href="teach-not-pass.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未通过</span>
+                            </a>
+                            <a href="to-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>待审核</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-table"></i>
+                        <span>课程管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="courses-pass-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>审核通过课程</span>
+
+                            </a>
+
+                            <a href="courses-not-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未通过审核课程</span>
+                            </a>
+                            <a href="courses-to-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未审核课程</span>
+                            </a>
+                            <a href="courses-manage.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>课程签到统计</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-shopping-bag"></i>
+                        <span>付费管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu" style="display: block">
+                        <li>
+                            <a href="set-pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>付费价格设置</span>
+                            </a>
+                            <a href="pay.html" class="nav-link active">
+                                <i class="am-icon-angle-right"></i>
+                                <span>付费订单管理</span>
+                            </a>
+                            <a href="complete-pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>支付完成订单</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="ceshi.html">
+                        <i class="am-icon-phone"></i>
+                        <span>测试分页</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="tpl-content-wrapper">
+        <div class="tpl-content-page-title">
+            付费订单管理
+        </div>
+        <div class="tpl-portlet-components">
+            <div class="tpl-block">
+                <div class="row" style="margin-top: -12px;padding-top: 12px">
+                    <!--<div class="am-modal am-modal-prompt" tabindex="-1" id="my-alert">-->
+                        <!--<div class="am-modal-dialog">-->
+                            <!--&lt;!&ndash;<div class="am-modal-hd">写点理由吧，你都拒绝别人了</div>&ndash;&gt;-->
+                            <!--<div class="am-modal-bd">-->
+                                <!--<p>我所思兮在泰山 欲望从之梁父艰</p>-->
+                                <!--<textarea name="" id="delete-reason" cols="60" rows="10"></textarea>-->
+                            <!--</div>-->
+                            <!--<div class="am-modal-footer">-->
+                                <!--<span class="am-modal-btn" id="delete-submit">提交</span>-->
+                                <!--<span class="am-modal-btn" data-am-modal-cancel>取消</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="am-u-md-2" style="margin-top: -12px">
+                        <p>开始时间</p>
+                        <input type="text" id="pay-start-time" class="am-form-field tpl-form-no-bg" placeholder="输入开始时间" data-am-datepicker="" style="border: 1px solid #000;margin-top: -14px;width: 170px;background-color: #FFFFFF"/>
+                    </div>
+                    <div class="am-u-md-2" style="margin-top: -12px">
+                        <p>结束时间</p>
+                        <input type="text" id="pay-end-time" class="am-form-field tpl-form-no-bg" placeholder="输入结束时间" data-am-datepicker="" style="border: 1px solid #000;margin-top: -14px;width: 170px;background-color: #FFFFFF"/>
+                    </div>
+                    <div class="am-u-md-2" style="margin-top: -15px">
+                        <p>订单号</p>
+                        <input type="text" id="pay-order"  placeholder="请输入订单号" style="border: 1px solid #000;margin-top: -14px;width: 170px;height: 34px"/>
+                    </div>
+                    <button class="am-btn-success" id="query-pay">查询</button>
+                    <!--<button class="am-btn-danger" id="delete-pay" data-am-modal="{target: '#my-alert'}">删除</button>-->
+                </div>
+                <div class="row">
+                    <!--<div class="am-g am-u-lg-12 am-u-md-12 am-u-sm-12">-->
+                        <div class="am-u-sm-12">
+                            <form class="am-form">
+                                <table class="am-table am-table-striped am-table-hover table-main">
+                                    <thead style="background-color: #656565;" class="table-head">
+                                    <tr>
+                                        <th class="table-id" style="width: 10%">序号</th>
+                                        <th class="table-title" style="width:10%">用户昵称</th>
+                                        <th class="table-title" style="width:10%">手机号</th>
+                                        <th class="table-title" style="width:10%">订单号</th>
+                                        <th class="table-title" style="width:10%;">付费价格</th>
+                                        <th class="table-title" style="width:20%">订单提交时间</th>
+                                        <th class="table-title" style="width:10%;">支付方式</th>
+                                        <th class="table-title" style="width:10%">支付完成</th>
+                                        <th class="table-check" style="width: 10%;">
+                                            操作
+                                            <input type="checkbox" class="tpl-table-fz-check" value="" onclick="selectAll()" name="controlAll"  id="controlAll">
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <script>
+                                        function selectAll(){
+                                            var checklist = document.getElementsByName ("aId");
+                                            if(document.getElementById("controlAll").checked)
+                                            {
+                                                for(var i=0;i<checklist.length;i++)
+                                                {
+                                                    checklist[i].checked = 1;
+                                                }
+                                            }else{
+                                                for(var j=0;j<checklist.length;j++)
+                                                {
+                                                    checklist[j].checked = 0;
+                                                }
+                                            }
+                                        }
+                                    </script>
+                                    <tbody class="check-table" id="payOrder">
+
+                                    </tbody>
+                                </table>
+                                <div class="am-cf" style="margin-right:20px">
+                                    <div class="am-fr">
+                                        <a id="spanPre">上一页</a>
+                                        <a id="spanNext">下一页</a>
+
+                                        <span id="spanPageNum"></span>
+                                        /
+                                        <span id="spanTotalPage"></span>
+                                    </div>
+                                </div>
+                                <hr>
+
+                            </form>
+                        </div>
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="tpl-alert"></div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/iscroll.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pay.js"></script>
+<!--<script src="assets/js/index.js"></script>-->
+</body>
+</html>

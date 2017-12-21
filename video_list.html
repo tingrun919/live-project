@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>课程历史视频—鲲鹏爱乐</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="./css/resect.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<link href="http://nos.netease.com/vod163/nep.min.css" rel="stylesheet">
+		<script src="http://nos.netease.com/vod163/nep.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/loaders.css">
+	<link rel="stylesheet" href="css/index.css">
+	<style>
+		.main,.video{
+			height: auto
+		}
+
+		.wi{
+			width:60%;
+			height: 800px;
+			 position: absolute;
+		    left: 50%;
+		    top: 50px;
+		    margin-left: -30%;
+		    background-color: #fff;
+		}
+		.media{
+			width: 100%;
+		    height: 725px;
+		    margin: 0px auto;
+		}
+		.video-js{width:100%;height:100%;}
+		.loader{
+			width:80px;
+			height: 80px;
+			position: absolute;
+			left: 40%;
+			top:40%;
+		}
+		.close{
+			width:50px;
+			height:50px;
+			position: absolute;
+			right:0px;
+			top:0px;
+			box-sizing: border-box;
+			padding:10px;
+		}
+		.close:hover{
+			background-color: #1296db;
+
+		}
+		#name{
+			width:100%;
+			height: 50px;
+			line-height: 50px;
+			font-size: 16px;
+			text-align:left;
+			padding-left: 20px;
+			box-sizing: border-box;
+			color: #5b5555;
+			font-weight: bold;
+		}
+		.blur {    
+		    -webkit-filter: blur(5px); /* Chrome, Opera */
+		       -moz-filter: blur(5px);
+		        -ms-filter: blur(5px);    
+		            filter: blur(5px);    
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航 -->
+	<iframe src="header.html" width="100%" height="200px"></iframe>
+	<!--  banner-->
+	<!-- 是否轮播 -->
+	<!-- 优秀视频展示 -->
+	<div class="title3">优秀视频</div>
+	<div class="video">
+		<div class="main" id="video">
+			<div class="v">
+				<img src="images/zw32.png" alt="" class="zb1">
+				<div class="loader">
+					    <div class="loader-inner ball-spin-fade-loader">
+					      <div></div>
+					      <div></div>
+					      <div></div>
+					      <div></div>
+					      <div></div>
+					      <div></div>
+					      <div></div>
+					      <div></div>
+					    </div>
+					  </div>
+				<div class="bg2">
+					<span class="zt1">正在加载</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部栏(功能。服务。联系我们) -->
+	<footer>
+		<div class="main1" style="background-color:#424141">
+			<div class="f_l">
+				<div class="gn">功能</div>
+				<div class="gk"><a href="pay.html">购买课程</a></div>
+				<div class="ck"><a href="syllabus.html">购买课程</a></div>
+				<div class="jl"><a href="lecturer.html">讲师列表</a></div>
+			</div>
+			<div class="f_l">
+				<div class="gn">服务</div>
+				<div class="gk">收费说明</div>
+				<div class="ck">用户注册使用协议</div>
+				<div class="jl">讲师注册使用协议</div>
+			</div>
+			<div class="f_l">
+				<div class="gn">联系我们</div>
+				<div class="gk">办公地址XXXXXX</div>
+				<div class="ck">联系电话XXXXXX</div>
+				<div class="jl">服务邮箱XXXXXX</div>
+			</div>
+		</div>
+		<div class="ic">ICP备案XXXXXXXXXX</div>
+		<div class="bq">鲲鹏爱乐©版权所有</div>
+	</footer>
+	<div class="mask">
+		<div class="wi">
+			<p id="name"></p>
+			<img src="images/close.png" alt="" class="close">
+			<div class="media">
+				<video id="my-video" class="video-js vjs-big-play-centered">
+	    			<source src="http://flv53b28b1b.live.126.net/live/136e3cceb7ba49f198f62262bf1cbcfe.flv?netease=flv53b28b1b.live.126.net" type="video/x-flv">
+				</video>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(".close").hover(function(){
+			$(this)[0].src="images/close_48.png";
+		},function(){
+			$(this)[0].src="images/close.png";
+		})
+		$(".kg").click(function(){
+			console.log($("header")[0].style.height);
+			console.log($("header").css("height"));
+			if($("header")[0].style.height=="100px"||$("header").css("height")=="100px"){
+				$("header").animate({
+					height:"440px"
+				},1000);
+				$(".nav").show();
+			}else{
+				$("header").animate({
+					height:"100px"
+				},1000);
+				$(".nav").hide();
+			}
+			
+		})
+		var token=sessionStorage.getItem("aWebtoken");
+		var nick=sessionStorage.getItem("aNickname");
+		console.log(token);
+		if(token==null){
+			$(".login").show();
+			$(".position").hide()
+		}else{
+			$(".login").hide();
+			$(".position").show()
+			$(".position span")[0].innerText=nick;
+		}
+		$(".sign_out").click(function(){
+    		sessionStorage.clear();
+    		location.reload() 
+    	})
+		function toVideo(e){
+
+			function flashChecker() {  
+			  var hasFlash = 0;　　　　 //是否安装了flash    
+			  var flashVersion = 0;　　 //flash版本    
+			  
+			  if(document.all) {  
+			    var swf = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');  
+			    if(swf) {  
+			      hasFlash = 1;  
+			      VSwf = swf.GetVariable("$version");  
+			      flashVersion = parseInt(VSwf.split(" ")[1].split(",")[0]);  
+			    }  
+			  } else {  
+			    if(navigator.plugins && navigator.plugins.length > 0) {  
+			      var swf = navigator.plugins["Shockwave Flash"];  
+			      if(swf) {  
+			        hasFlash = 1;  
+			        var words = swf.description.split(" ");  
+			        for(var i = 0; i < words.length; ++i) {  
+			          if(isNaN(parseInt(words[i]))) continue;  
+			          flashVersion = parseInt(words[i]);  
+			        }  
+			      }  
+			    }  
+			  }  
+			  return { f: hasFlash, v: flashVersion };  
+			}  
+			  
+			var fls = flashChecker();  
+			var s = "";  
+			if(!fls.f) {  
+			  if(confirm("您的浏览器未安装Flash插件，现在安装？")) {  
+			    window.location.href = "https://get2.adobe.com/cn/flashplayer/";  
+			  }
+			}else{
+				$("body").css("overflow","hidden");
+				$("header").addClass("blur");
+				$(".title3").addClass("blur");
+				$(".video").addClass("blur");
+				$("footer").addClass("blur");
+			  var aid=$(e)[0].dataset.aid;
+			  console.log();
+			  $("#name")[0].innerText=$(e)[0].children[1].children[0].innerText;
+			$(".mask").show();
+			var width=$(window).width();
+			var height=$(window).height();
+			str = sessionStorage.obj; 
+	    	//重新转换为对象 
+	   		 obj = JSON.parse(str);
+	 		console.info(obj);
+	 		var optione={
+						"controls": true,
+						"autoplay": true,
+						"preload": "auto",
+						 "loop": true,
+						 "width":"100%",
+						 "height": "100%",
+						 "techOrder": ["flash", "html5"],
+						 "streamTimeoutTime": 30 * 1000, 
+						  "bigPlayButton":false,
+					    controlBar: { 
+					        playToggle: true
+					    }	    
+					}
+					
+					var myPlayer = neplayer("my-video", optione);
+					myPlayer.onPlayState(1,function(){
+					    console.log('play');
+					});
+					myPlayer.onPlayState(2,function(){
+					    console.log('pause');
+					});
+					myPlayer.onPlayState(3,function(){
+					    console.log('ended');
+					});
+					myPlayer.onError(function(err){
+			    		console.log(err.errCode);
+			    		console.log(err.errMsg);
+					});
+	 		for(var i=0;i<obj.length;i++){
+				if(aid==obj[i].aId){
+					 // obj[i].video.ret.origUrl
+					 
+					console.log(obj[i].video.ret.origUrl)
+					myPlayer.setDataSource(obj[i].video.ret.origUrl);
+				}
+			}
+	       $(".wi").click(function(event){
+	       	event.stopPropagation(); 
+
+	       })
+	       $(".close").click(function(){
+	       		$(".mask").hide();
+	       		$("body").css("overflow","auto");
+				$("header").removeClass("blur");
+				$(".title3").removeClass("blur");
+				$(".video").removeClass("blur");
+				$("footer").removeClass("blur");
+	       })
+	       $(".mask").click(function(){
+				$(this).hide();
+				myPlayer.reset();
+				$("body").css("overflow","auto");
+				$("header").removeClass("blur");
+				$(".title3").removeClass("blur");
+				$(".video").removeClass("blur");
+				$("footer").removeClass("blur");
+			})	
+			} 
+			
+		
+		}
+		// 课程表
+		$(function(){
+			var token=sessionStorage.getItem("aWebtoken");
+			// 首页设置查询
+			$.ajax({
+				url:'http://47.94.251.233:8080/saxophone/saxo/selectPCmain',
+				dataType:'jsonp',  
+        		jsonp:'callback', 
+				async:false,
+				success: function(res){
+					console.log(res);
+				if (res.code==100000) {
+					var obj = res.data; 
+    				var str = JSON.stringify(obj);
+    				  //存入 
+    				sessionStorage.obj = str;  
+					$("#video")[0].innerHTML="";
+					for (var i = res.data.length - 1; i >= 0; i--) {
+							$("#video").append('<div class="v"  data-aid="'+res.data[i].aId+'" onclick="toVideo(this)" ><img src="'+res.data[i].aCover+'" alt="" class="zb1"><div class="bg2"><span class="zt1">'+res.data[i].aName+'</span></div></div>')
+					}
+					
+				}else{
+					
+				}
+			},
+		})
+    	// 首页讲师列表
+		})
+	</script>
+
+</body>
+</html>	

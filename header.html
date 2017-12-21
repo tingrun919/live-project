@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鲲鹏爱乐</title>
+<link rel="stylesheet" href="css/resect.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/header.css"/>
+</head>
+<body id="index">
+	<header style="background-color: #fff; overflow: hidden;">
+		<div class="container2" style="margin-top: 45px;">
+			<div class="kg">
+				<img src="images/menu.png" alt="">
+			</div>
+			<!-- logo -->
+			<div class="logo" onclick="window.location.href='index. html'">鲲鹏爱乐</div>
+			<!-- 导航 -->
+			<div class="nav">
+				<ul class="ul">
+					<li class="nav1 active">
+						<a href="index.html"  target="_parent">
+							<img src="img/index.png"/>
+							<span class="name">首页</span>
+							<span>Home</span>
+						</a>
+					</li>
+					<li class="nav2 ">
+						<a href="video_list.html " target="_parent">
+							<img src="img/video.png"/>
+							<span class="name">优秀课程</span>
+							<span>Video</span>
+						</a>
+					</li>
+					<li class="nav3 ">
+						<a href="pay.html" target="_parent">
+							<img src="img/sell.png"/>
+							<span class="name">购买课程</span>
+							<span>Pay syllabus</span>
+						</a>
+					</li>
+					<li class="nav4 ">
+						<a href="syllabus.html" target="_parent">
+							<img src="img/syble.png"/>
+							<span class="name">课时表</span>
+							<span>Syllabus list</span>
+						</a>
+					</li>
+					<li class="nav5 ">
+						<a href="lecturer.html" target="_parent">
+							<img src="img/lecture.png"/>
+							<span class="name">讲师列表</span>
+							<span>Lecture list</span>
+						</a>
+					</li>
+					<li class="nav6 " >
+						<a href="#" target="_parent"> 
+							<img src="img/bbs.png"/>
+							<span class="name">论坛</span>
+							<span>Forum</span>
+						</a>
+					</li>
+					<li class="nav7">
+						<a href="contact-us.html" target="_parent">
+							<img src="img/about_us.png"/>
+							<span class="name">加入我们</span>
+							<span>Join us</span>
+						</a>
+						
+					</li>
+				</ul>
+			</div>
+			<!-- 登录注册 -->
+			<div class="login">
+				<a href="login.html" class="login1" target="_parent">登录</a>
+				<a href="register.html" class="register" target="_parent">注册</a>
+			</div>
+			<!-- 登录之后显示个人信息 和 退出登录 -->
+			<div class="position">
+				<img src="images/a.png" alt="" onclick="toPosition()">
+				<span onclick="toPosition()">lst浅笑</span>
+				<a href="#" class="sign_out">退出登录</a>
+			</div>
+		</div>
+	</header>
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+	var token=sessionStorage.getItem("aWebtoken");
+	var nick=sessionStorage.getItem("aNickname");
+	var aIfmember=sessionStorage.getItem("aIfmember");
+	console.log(token==null);
+	if(token==null){	
+		$(".login").show();
+		$(".position").hide()
+	}else{
+		$(".login").hide();
+		$(".position").show()
+		$(".position span")[0].innerText=nick;
+	}
+	var color=["41bfee","87bd42","f1ab3e","eb6363","63bec6","b598c3","e55927","3a434f"];
+	$(".ul li").hover(function(){
+		console.log($(this)[0].classList[0].split("v")[1]);
+		var index=$(this)[0].classList[0].split("v")[1];
+		console.log($(".nav"+index+".active "));
+		var li=$(this).siblings();
+		for(var i=0;i<li.length;i++){
+			$(li[i])[0].style.borderBottom="none";
+		}
+		$(".nav"+index)[0].style.borderBottom="3px solid #"+color[index-1];
+	})
+	$(".ul li").click(function(){
+		var index=$(this)[0].classList[0].split("v")[1];
+		$(".nav"+index)[0].style.borderBottom="none";
+		var li=$(this).siblings();
+		for(var i=0;i<li.length;i++){
+			$(li[i])[0].style.borderBottom="none";
+		}
+	})
+	$("#swiper-wrapper").click(function(){
+		$(".bg").animate({
+			height:"80px"
+		},1000);
+		$(".toRoom").hide()
+	})
+	function toPosition(){
+		window.location.href="position.html?";	
+	}
+</script>
+</html>

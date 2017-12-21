@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>设置付费价格</title>
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="assets/i/2.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body data-type="generalComponents">
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <a href="" class="tpl-logo">
+            <img src="assets/image/logo.png" alt="">
+        </a>
+    </div>
+    <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+            <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                    <span class="tpl-header-list-user-nick">管理员小王</span>
+                        <span class="tpl-header-list-user-ico">
+                            <img src="assets/image/user01.png">
+                        </span>
+                </a>
+                <ul class="am-dropdown-content">
+                    <!--<li><a href="#"><span class="am-icon-user"></span> 资料</a></li>-->
+                    <!--<li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>-->
+                    <li><a href="index.html"><span class="am-icon-power-off"></span> 退出</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="tpl-page-container tpl-page-header-fixed">
+    <div class="tpl-left-nav tpl-left-nav-hover">
+        <div class="tpl-left-nav-title">
+            管理列表
+        </div>
+        <div class="tpl-left-nav-list">
+            <ul class="tpl-left-nav-menu">
+                <li class="tpl-left-nav-item">
+                    <a href="shouye.html" class="nav-link">
+                        <i class="am-icon-home"></i>
+                        <span>首页管理</span>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-leanpub"></i>
+                        <span>讲师管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="teach-pass-aduit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>讲师列表</span>
+
+                            </a>
+
+                            <a href="teach-not-pass.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未通过审核</span>
+
+                            </a>
+                            <a href="to-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>待审核讲师</span>
+
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-table"></i>
+                        <span>课程管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="courses-pass-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>审核通过课程</span>
+                            </a>
+                            <a href="courses-not-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未通过审核课程</span>
+                            </a>
+                            <a href="courses-to-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未审核课程</span>
+                            </a>
+                            <a href="courses-manage.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>课程签到统计</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-shopping-bag"></i>
+                        <span>付费管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu" style="display: block">
+                        <li>
+                            <a href="set-pay.html" class="nav-link active">
+                                <i class="am-icon-angle-right"></i>
+                                <span>付费价格设置</span>
+                            </a>
+                            <a href="pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>付费订单管理</span>
+                            </a>
+                            <a href="complete-pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>支付完成订单</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="tpl-content-wrapper">
+        <div class="tpl-content-page-title">
+            付费价格设置
+        </div>
+        <div class="tpl-portlet-components">
+            <div class="tpl-block">
+                <div class="row">
+                    <div class="am-g am-u-lg-12 am-u-md-12 am-u-sm-12">
+                        <div class="am-u-sm-12">
+                            <div id="box"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="am-g tpl-amazeui-form" style="margin-top: 30px">
+                    <div class="am-u-sm-12 am-u-md-9">
+                        <form class="am-form am-form-horizontal">
+                            <!--<div class="am-form-group">-->
+                                <!--<label for="user-name" class="am-u-sm-3 am-form-label">姓名 / Name</label>-->
+                                <!--<div class="am-u-sm-9">-->
+                                    <!--<input type="text" id="user-name" placeholder="姓名 / Name">-->
+                                    <!--<small>输入你的名字，让我们记住你。</small>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="am-form-group">-->
+                                <!--<label for="user-email" class="am-u-sm-3 am-form-label">电子邮件 / Email</label>-->
+                                <!--<div class="am-u-sm-9">-->
+                                    <!--<input type="email" id="user-email" placeholder="输入你的电子邮件 / Email">-->
+                                    <!--<small>邮箱你懂得...</small>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="am-form-group">-->
+                                <!--<label for="user-phone" class="am-u-sm-3 am-form-label">电话 / Telephone</label>-->
+                                <!--<div class="am-u-sm-9">-->
+                                    <!--<input type="tel" id="user-phone" placeholder="输入你的电话号码 / Telephone">-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <div class="am-form-group">
+                                <label for="price" class="am-u-sm-3 am-form-label">当前年费价格</label>
+                                <div class="am-u-sm-9" id="set-price">
+
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="price-introduce" class="am-u-sm-3 am-form-label">首页banner图(1920x400)</label>
+                                <div class="am-u-sm-9">
+                                    <div class="group-ipt img" id="img">
+
+                                    </div>
+                                    <form class="group-ipt email">
+                                        <input type="file" name="file" id="file" class="ipt demo1" placeholder="上传头像">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="price-introduce2" class="am-u-sm-3 am-form-label" style="margin-left: 193px">当前特权介绍</label>
+                                <div class="am-u-sm-9" id="set-text">
+
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                    <button type="button" class="am-btn am-btn-primary" id="set-pay">修改提交</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="tpl-alert"></div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/iscroll.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/set-pay.js"></script>
+<script>
+//    var mySelect=document.getElementById("jiangshi");
+//    var index1=mySelect.selectedIndex;
+//    var op1=mySelect.options[index1].value;
+</script>
+</body>
+</html>

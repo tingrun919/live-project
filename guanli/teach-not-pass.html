@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>未通过审核讲师</title>
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="assets/i/2.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/table.css"/>
+</head>
+
+<body data-type="generalComponents">
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <a href="" class="tpl-logo">
+            <img src="assets/image/logo.png" alt="">
+        </a>
+    </div>
+    <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+            <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                    <span class="tpl-header-list-user-nick">管理员小王</span>
+                        <span class="tpl-header-list-user-ico">
+                            <img src="assets/image/user01.png">
+                        </span>
+                </a>
+                <ul class="am-dropdown-content">
+                    <!--<li><a href="#"><span class="am-icon-user"></span> 资料</a></li>-->
+                    <!--<li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>-->
+                    <li><a href="index.html"><span class="am-icon-power-off"></span> 退出</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="tpl-page-container tpl-page-header-fixed">
+    <div class="tpl-left-nav tpl-left-nav-hover">
+        <div class="tpl-left-nav-title">
+            管理列表
+        </div>
+        <div class="tpl-left-nav-list">
+            <ul class="tpl-left-nav-menu">
+                <li class="tpl-left-nav-item">
+                    <a href="shouye.html" class="nav-link">
+                        <i class="am-icon-home"></i>
+                        <span>首页管理</span>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-leanpub"></i>
+                        <span>讲师管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu" style="display: block">
+                        <li>
+                            <a href="teach-pass-aduit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>讲师列表</span>
+                            </a>
+                            <a href="teach-not-pass.html" class="nav-link active">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未通过</span>
+                            </a>
+                            <a href="to-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>待审核</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-table"></i>
+                        <span>课程管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="courses-pass-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>审核通过</span>
+                            </a>
+                            <a href="courses-not-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未通过</span>
+                            </a>
+                            <a href="courses-to-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未审核</span>
+                            </a>
+                            <a href="courses-manage.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>课程签到统计</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-shopping-bag"></i>
+                        <span>付费管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="set-pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>付费价格设置</span>
+                            </a>
+                            <a href="pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>付费订单管理</span>
+                            </a>
+                            <a href="complete-pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>支付完成订单</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="tpl-content-wrapper">
+        <div class="tpl-content-page-title">
+            未通过审核讲师
+        </div>
+        <div class="tpl-portlet-components">
+            <div class="tpl-block">
+                <div class="row">
+                    <!--<div class="am-g am-u-lg-12 am-u-md-12 am-u-sm-12">-->
+                        <div class="am-u-sm-12">
+                            <form class="am-form">
+                                <table class="am-table am-table-striped am-table-hover table-main">
+                                    <thead style="background-color: #656565;" class="table-head">
+                                    <tr>
+                                        <th class="table-id" style="width: 10%">序号</th>
+                                        <th class="table-title" style="width:20%">昵称</th>
+                                        <th class="table-title" style="width:10%">手机号</th>
+                                        <th class="table-title" style="width:10%;padding-left: 50px">是否为教师</th>
+                                        <th class="table-title" style="width:30%">用户描述</th>
+                                        <th class="table-title" style="width:20%;padding-left: 62px">审核失败原因</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="check-table" id="teach-not-pass">
+
+                                    </tbody>
+                                </table>
+                                <div class="am-cf" style="margin-right:20px">
+                                    <div class="am-fr">
+                                        <button id="spanFirst" class="am-btn-success">第一页</button>
+                                        <button id="spanPre" class="am-btn-success">上一页</button>
+                                        <button id="spanNext" class="am-btn-success">下一页</button>
+                                        <button id="spanLast" class="am-btn-success">最后一页</button>
+                                        <span id="spanPageNum" class="am-btn-default"></span>
+                                        /
+                                        <span id="spanTotalPage" class="am-btn-default"></span>
+                                    </div>
+                                </div>
+                                <hr>
+
+                            </form>
+                        </div>
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="tpl-alert"></div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/iscroll.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/teacher.js"></script>
+<script type="text/javascript">
+//    document.onreadystatechange = function () {
+//        if(document.readyState=="complete") {
+            var theTable = document.getElementById("teach-not-pass");
+            var totalPage = document.getElementById("spanTotalPage");
+            var pageNum = document.getElementById("spanPageNum");
+
+            var spanPre = document.getElementById("spanPre");
+            var spanNext = document.getElementById("spanNext");
+            var spanFirst = document.getElementById("spanFirst");
+            var spanLast = document.getElementById("spanLast");
+
+            var numberRowsInTable = theTable.rows.length;
+            var pageSize = 10;
+            var page = 1;
+
+            //下一页
+            function next() {
+
+                hideTable();
+
+                currentRow = pageSize * page;
+                maxRow = currentRow + pageSize;
+                if ( maxRow > numberRowsInTable )
+                    maxRow = numberRowsInTable;
+                for ( var i = currentRow; i< maxRow; i++ ) {
+                    theTable.rows[i].style.display = '';
+                }
+                page++;
+                if ( maxRow == numberRowsInTable ){
+                    nextText();
+                    lastText();
+                }
+                showPage();
+                preLink();
+                firstLink();
+            }
+
+            //上一页
+            function pre() {
+
+                hideTable();
+
+                page--;
+
+                currentRow = pageSize * page;
+                maxRow = currentRow - pageSize;
+                if ( currentRow > numberRowsInTable )
+                    currentRow = numberRowsInTable;
+                for ( var i = maxRow; i< currentRow; i++ ) {
+                    theTable.rows[i].style.display = '';
+                }
+
+
+                if ( maxRow == 0 ) {
+                    preText();
+                    firstText();
+                }
+
+                showPage();
+                nextLink();
+                lastLink();
+            }
+
+            //第一页
+            function first() {
+                hideTable();
+                page = 1;
+                for ( var i = 0; i<pageSize; i++ ) {
+                    theTable.rows[i].style.display = '';
+                }
+                showPage();
+
+                preText();
+                nextLink();
+                lastLink();
+            }
+
+            //最后一页
+            function last() {
+                hideTable();
+                page = pageCount();
+                currentRow = pageSize * (page - 1);
+                for ( var i = currentRow; i<numberRowsInTable; i++ ) {
+                    theTable.rows[i].style.display = '';
+                }
+                showPage();
+
+                preLink();
+                nextText();
+                firstLink();
+            }
+
+            function hideTable() {
+                for ( var i = 0; i<numberRowsInTable; i++ ) {
+                    theTable.rows[i].style.display = 'none';
+                }
+            }
+
+            function showPage() {
+                pageNum.innerHTML = page;
+            }
+
+            //总共页数
+            function pageCount() {
+                var count = 1;
+                if ( numberRowsInTable%pageSize != 0 ) count = 1;
+                return parseInt(numberRowsInTable/pageSize) + count;
+            }
+
+            //显示链接
+            function preLink() { spanPre.innerHTML = "<a href='javascript:pre();'>上一页</a>"; }
+            function preText() { spanPre.innerHTML = "上一页"; }
+
+            function nextLink() { spanNext.innerHTML = "<a href='javascript:next();'>下一页</a>"; }
+            function nextText() { spanNext.innerHTML = "下一页"; }
+
+            function firstLink() { spanFirst.innerHTML = "<a href='javascript:first();'>第一页</a>"; }
+            function firstText() { spanFirst.innerHTML = "第一页"; }
+
+            function lastLink() { spanLast.innerHTML = "<a href='javascript:last();'>最后一页</a>"; }
+            function lastText() { spanLast.innerHTML = "最后一页"; }
+
+            //隐藏表格
+            function hide() {
+                for ( var i = pageSize; i<numberRowsInTable; i++ ) {
+                    theTable.rows[i].style.display = 'none';
+                }
+
+                totalPage.innerHTML = pageCount();
+                pageNum.innerHTML = '1';
+
+                nextLink();
+                lastLink();
+            }
+
+            hide();
+//        }
+//    };
+</script>
+</body>
+</html>

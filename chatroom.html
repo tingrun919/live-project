@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>直播间</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/resect.css">
+	<link rel="stylesheet" href="./dist/css/chartroom.css"/>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/chartroom_head.css"/>
+	<link href="http://nos.netease.com/vod163/nep.min.css" rel="stylesheet">
+	<script src="http://nos.netease.com/vod163/nep.min.js"></script>
+	<style>
+	body{position: relative;}
+		
+		body,.media{
+			width:100%;
+			height: 100%!important;
+
+		}
+		.video-js{
+			height:100% !important;
+			width:100%;
+		}
+		#room{
+			height: 100%;
+			margin-top: 0px;
+			position: relative;
+		}
+		.g-right{
+			position: absolute !important;
+			right:22%;
+			top:0px;
+			z-index: 100;
+		}
+		.vjs-control-bar{
+			z-index: 99
+		}
+		.g-left{
+			width:100% !important;
+			height: 100%;
+			border-right:none;
+		}
+		.g-right{
+			width:400px !important;
+			right: 327px;
+			background-color: #fff;
+		}
+		.m-room .announcement_title {
+		    height: 4% !important;
+		    background-color: #fff;
+		}
+		.m-room .announcement {
+		    height: 11% !important;
+		}
+		.m-room .tab {
+		    height: 5% !important;
+		}
+		.m-room .chat {
+		    height: 70% !important;
+		}
+		.m-room .edit {
+		    height: 6% !important;
+		}
+		.m-room .sendBtn {
+		    height: 4%;
+		}
+		.m-room .member {
+		    height: 70%;
+		}
+		.img_left{
+			position: absolute;
+			left: 0px;
+			top:0px;
+			background:url(images/12.jpg) no-repeat center center;
+			width:38%;
+			height: 100%;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+		}
+		.img_right{
+			position: absolute;
+			right: 0px;
+			top:0px;
+			background:url(images/13.jpg) no-repeat center center;
+			width:38%;
+			height: 100%;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+		}
+		.mas{
+			width:100%;
+			height: 100%;
+			background-color:#333;
+		}
+		.middle{
+			display: none;
+			width:24%;
+			height: 100%;
+			background-color: #000;
+			color: #fff;
+			position: absolute;
+			left:38%;
+			top:0px;
+			font-size: 24px;
+			line-height: 25;
+			text-align:center;
+		}
+		.teacher_info{
+			width:400px;
+			height:100%;
+			position: absolute;
+			left: 45%;
+			top:0px;
+			background-color: #fff;
+		}
+		.t_img{
+			position: absolute;
+			left: 40px;
+			top:33px;
+			width: 40px;
+			height:40px;
+			border-radius: 50%;
+		}
+		.t_name{
+			position: absolute;
+			left: 102px;
+			color: #333;
+			top:40px;
+			font-size: 24px;
+		}
+		.induct{
+			    position: absolute;
+			    left: 37px;
+			    top: 96px;
+			    width: 311px;
+			    color: #666;
+			    line-height: 2;
+			    font-size: 16px;
+			    overflow-x: hidden;
+		}
+		.gz{
+			width: 50px;
+		    height: 30px;
+		    border: 1px solid rgb(10, 218, 228);
+		    color: rgb(10, 218, 228);
+		    font-size: 16px;
+		    line-height: 30px;
+		    text-align: center;
+		    background-color: transparent;
+		    position: absolute;
+		    right: 145px;
+		    top:40px;
+		}
+		.gz:hover{
+			color: #fff;
+			background-color:  rgb(10, 218, 228);
+		}
+		.m-room .edit .editText {
+		    width: 100%;
+		    height: 158px;
+		    padding: 4px 5px;
+		    margin: 0 auto;
+		    box-sizing: border-box;
+		    background-color: #fff;
+		    border: 1px solid #ccc;
+		    border-radius: 2px;
+		}
+		.m-room .edit {
+			width:100%;
+		    height: 6% !important;
+		    position: absolute;
+		    left: 0px;
+		    bottom:123px;
+		    padding:0px;
+		}
+		.m-room .sendBtn {
+		    width: 100%;
+		    position: absolute;
+		    right: 10px;
+		    bottom: 10px;
+		    box-sizing: border-box;
+		    zoom: 1;
+		}
+		.induct{
+			height: 80%;
+			overflow-y: scroll;
+		}
+		.induct img{width:100%;display:block;}
+		.induct div{display: none;}
+		@media only screen and (min-width:100px) and (max-width: 800px) {
+			.teacher_info,.img_left{
+				display: none;
+			}
+			video{
+				width:300% !important; 
+				object-fit: cover;
+				
+			}
+			.m-room .g-right{
+				width:30%;
+				height: auto;
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				
+			}
+		}
+	</style>
+</head>
+<body>
+	<iframe src="header.html" width="100%" height="165px"></iframe>
+	<div class="g-doc">
+		<div class="m-room" id="room">
+			<div class="g-left">
+				<div class="media">
+					<video id="my-video" class="video-js vjs-big-play-centered">
+    					<source src="http://flv53b28b1b.live.126.net/live/136e3cceb7ba49f198f62262bf1cbcfe.flv?netease=flv53b28b1b.live.126.net" type="video/x-flv">
+					</video>
+				</div>
+				<div class="img_left">
+					<div class="mas">
+						<div class="teacher_info">
+							<img src="" alt="" class="t_img">
+							<p class="t_name"></p>
+							<button class="gz">关注</button>
+							<div class="induct">讲师个人介绍</div>
+						</div>
+					</div>
+				</div>
+				<div class="middle status">主播暂时不在！</div>
+				<div class="middle pause">已暂停</div>
+				<div class="meddle end">直播已结束，谢谢观看</div>
+				<div class="img_right">
+					<div class="mas"></div>
+				</div>
+			</div>
+			<div class="g-right">
+				<div class="m-status" id="linkStatus">连接中。。。</div>
+				<div class="announcement_title">
+					直播公告
+				</div>
+				<div class="announcement" id="roomAnnouncement">
+				</div>
+				<ul class="tab">
+					<li class="crt j-tab" data-value="chat">直播互动</li>
+					<li class="j-tab" data-value="member">在线成员</li>
+				</ul>
+				<div class="chat j-pannel j-chat">
+				</div>
+				<div class="member j-pannel hide">
+					<div class="list j-member">
+					</div>
+					<div class="more j-more">
+						<a>加载更多</a>
+					</div>
+				</div>
+				<div class="edit">
+					<textarea class="editText" id="editText" placeholder="Ctrl+Enter快速发送"></textarea>
+				</div>
+				<div class="sendBtn">
+					<div id="emojiTag"></div>
+					<a class="u-btn btn" id="sentText">发送</a>
+					<a class="btn emoji" id="emoji"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="menu" class="m-menu" style="display:none">
+		<ul>
+			<li class="j-item j-kick" data-type="0"  title="移除直播室">踢人</li>
+			<li class="j-item j-gag" data-type="1"  title="禁止发言">禁言</li>
+			<li class="j-item j-black" data-type="2"  title="永久不能进入该直播间">拉黑该用户</li>
+			<li class="j-item admin j-admin" data-type="3">任命管理员</li>
+		</ul>
+	</div>
+	<script src="js/NIM_Web_SDK_v4.1.0.js"></script>
+	<script type="text/javascript">
+		var url=window.location.href;
+        console.log(url)
+        var aid=url.split("?")[1].split("=")[1];
+        console.log(aid);
+        var token=sessionStorage.getItem("aWebtoken");
+		var nick=sessionStorage.getItem("aNickname");
+		var aIfmember=sessionStorage.getItem("aIfmember");
+		console.log(token==null);
+//		if(token==null){
+//			$(".login").show();
+//			$(".position").hide()
+//		}else{
+//			$(".login").hide();
+//			$(".position").show()
+//		
+//		}
+		 $(".sign_out").click(function(){
+    		sessionStorage.clear();
+    	 	window.location.href="index.html"; 
+    	})
+        $.ajax({
+        	url:'http://47.94.251.233:8080/saxophone/saxo/teachermain?webtoken='+token+"&aid="+aid,
+        	 dataType:'jsonp',  
+                jsonp:'callback', 
+                async:false,
+                success: function(res){
+                    console.log(res);
+                    if(res.code==100000){
+                    	if(res.data.iffollow==1){
+                    		$(".gz")[0].innerText="已关注";
+                    	}else{
+                    		$(".gz")[0].innerText="关注";
+                    	}
+                    	$(".t_img")[0].src=res.data.userinfo.aPortrait;
+                    	$(".t_name")[0].innerText=res.data.userinfo.aNickname;
+                    	$(".induct")[0].innerHTML=res.data.userinfo.aDiscript;
+                    }
+                 }
+        })
+        var addr=[];
+        $.ajax({
+                url:'http://47.94.251.233:8080/saxophone/saxo/intodirect?webtoken='+token+"&aid="+aid,
+                dataType:'jsonp',  
+                jsonp:'callback', 
+                async:false,
+                success: function(res){
+                    console.log(res);
+                if (res.code==100000) {
+
+                	if(res.data.state.ret.status==0){
+                		$(".status").show();
+                		$(".pause").hide();
+                		$(".end")	.hide();
+                	}else{
+                		sessionStorage.setItem("addr",res.data.room.addr[0]);
+                   	 	sessionStorage.setItem("roomid",res.data.channel.aRoomid);
+                    	sessionStorage.setItem("httpaddr",res.data.channel.aHttppullurl);
+                    	var optione={
+							"controls": true,
+							"autoplay": true,
+							"preload": "auto",
+							 "loop": true,
+							 "width":"100%",
+							 "height": "100%",
+							 "techOrder": ["flash", "html5"],
+							 "streamTimeoutTime": 30 * 1000, 
+						    controlBar: { 
+						        playToggle: true
+						    }	    
+						}
+						var myPlayer = neplayer("my-video", optione);
+						myPlayer.onPlayState(1,function(){
+						    console.log('play');
+						    $(".status").hide();
+				           $(".pause").hide();
+				           $(".end").hide();
+						});
+						myPlayer.onPlayState(2,function(){
+						   $(".status").hide();
+				           $(".pause").show();
+				           $(".end").hide();
+						});
+						myPlayer.onPlayState(3,function(){
+							$(".status").hide();
+				           $(".pause").hide();
+				           $(".end").show();
+						    console.log('ended');
+						});
+						myPlayer.onError(function(err){
+
+				    		console.log(err.errCode);
+				    		console.log(err.errMsg);
+				    		if(err.errCode==7){
+				    			$(".status").hide();
+				           		$(".pause").hide();
+				           		$(".end").show();
+				    		}
+						});
+						var httpaddr=sessionStorage.getItem("httpaddr");
+						myPlayer.setDataSource(httpaddr);
+                	}
+                    
+                }else{
+                    
+                }
+            },
+   	 })
+      	$(".gz").click(function(){
+      		if($(this)[0].innerText=="关注"){
+      			$.ajax({
+      			url:'http://47.94.251.233:8080/saxophone/saxo/userfollow?webtoken='+token+"&aid="+aid,
+	            dataType:'jsonp',  
+	            jsonp:'callback', 
+	            async:false,
+		            success: function(res){
+		                console.log(res);
+		              	if (res.code==100000) {
+		              		$(".gz")[0].innerText="已关注";
+		              	}
+		            }
+	      		})
+      		}else{
+      			$.ajax({
+      			url:'http://47.94.251.233:8080/saxophone/saxo/delfollow?webtoken='+token+"&aid="+aid,
+	            dataType:'jsonp',  
+	            jsonp:'callback', 
+	            async:false,
+		            success: function(res){
+		                console.log(res);
+		              	if (res.code==100000) {
+		              		$(".gz")[0].innerText="关注";
+		              	}
+		            }
+	      		})
+      		}
+      	})
+	</script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script src="./dist/js/util.js"></script>
+	<script src="./dist/js/emoji.js"></script>
+	<script src="./dist/js/link.js"></script>
+	<script src="./dist/js/room.js"></script>
+	<script type="text/javascript">
+		var width=$(window).width();
+		var height=$(window).height();
+		console.log(width,height);
+		$(".g-doc")[0].style.width=width+"px";
+		$(".g-doc")[0].style.height=height-100+"px";
+		var h1=height-100;
+		var w1=width;
+		
+	</script>
+</body>
+</html>

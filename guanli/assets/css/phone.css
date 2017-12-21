@@ -1,0 +1,359 @@
+.user-phone-table{
+    background-color: #ffffff;
+    height: 540px;
+    border: 1px solid #ffffff;
+    margin-right: 0;
+}
+.user-phone-table button{
+    border-radius: 8px;
+    background-color: #33a2fc;
+}
+.user-table{
+    /*height: 500px;*/
+}
+.user-table p{
+    margin-left: 5px;
+    display: inline-block;
+ }
+.user{
+    margin-left: 75px;
+    margin-top: 10px;
+}
+.user div{
+   padding-top: 20px;
+    margin-left: 11px;
+}
+.phone-button{
+    background-color: #ffffff;
+   margin-right: 100px;
+    border: 1px solid #ffffff;
+    float: right;
+    margin-top: 26px;
+
+}
+.phone-button button{
+    width: 150px;
+    height: 63px;
+    border-radius: 8px;
+}
+#table-extension{
+    width: 300px;
+    height: 63px;
+    margin-left: 168px;
+    margin-top: 50px;
+}
+.user-massage{
+    width: 30%;
+    margin-top: 32px;
+    padding-left: 85px;
+    margin-left: 40px;
+}
+.user-massage button{
+    width: 99px;
+    height: 42px;
+    margin-top: -2px;
+    margin-left: -50px;
+}
+.user-message-right{
+    margin-top: -97px;
+    margin-left: 284px;
+    width: 30%;
+}
+.user-message-right button{
+    width: 99px;
+    height: 42px;
+    margin-left: -53px;
+    margin-top: -2px;
+}
+.user-city{
+    margin-top: -99px;
+    margin-left: 455px;
+    width: 30%;
+}
+.user-city button{
+    width: 99px;
+    height: 42px;
+    margin-top: -2px;
+    margin-left: -51px;
+}
+.user-hobby{
+    width: 100%;
+    margin-left: 120px;
+    margin-top: 46px;
+}
+.user-hobby button{
+    width: 99px;
+    height: 42px;
+    margin-left: 1px;
+    margin-top: -2px;
+}
+.consumption-interval{
+    margin-top: 46px;
+    margin-left: 119px;
+}
+.consumption-interval button{
+    width: 193px;
+    height: 42px;
+    margin-left: -53px;
+    margin-top: -2px;
+}
+.consumption-hobby{
+    margin-left: 453px;
+    margin-top: -97px;
+}
+.consumption-hobby button{
+    width: 99px;
+    height: 42px;
+    margin-left: -53px;
+    margin-top: -2px;
+}
+
+.note-information{
+    background-color: #ffffff;
+    height: 500px;
+    margin-top: 50px;
+}
+.information-qi{
+    background-image: url("../i/6.png");
+    background-repeat: no-repeat;
+    padding-top: 46px;
+}
+.information-qi p{
+   margin-top: -5px;
+    color: #ffffff;
+    margin-left: 10px;
+}
+.user-note{
+    margin-left: 100px;
+    margin-top: 66px;
+}
+.user-note label{
+    margin-left: 10px;
+}
+.user-budget{
+    margin-left: 77px;
+    margin-top: 66px;
+}
+.user-budget2{
+    margin-left: 77px;
+    margin-top: 66px;
+}
+.user-budget3{
+    margin-left: 77px;
+    margin-top: 66px;
+}
+.user-budget3 div{
+    margin-left: 50px;
+}
+.user-budget4{
+    margin-left: 77px;
+    margin-top: 66px;
+    float: right;
+}
+#bg{
+    width: 100px;
+    height: 36px;
+    background: url("img/star_gray.png");
+}
+#over{
+    height:36px;
+    background:url("img/star_org.png") no-repeat;
+}
+.annotations{
+    margin-left: 800px;
+    margin-top: -302px;
+}
+.annotations textarea{
+    width: 510px;
+    height: 200px;
+}
+.user-lessee>li.lessee-id{
+    width: 100%;
+}
+.lessee-id a{
+    font-size: 14px;
+}
+.phone1{
+    width:150px ;
+    height: 63px;
+    background-color: #76d59b;
+    border-radius:8px ;
+    border: 1px solid #ffffff;
+    background-image: url("../i/back.png");
+    background-repeat: no-repeat;
+    background-position:30% center;
+    color: #ffffff;
+}
+.am-btn-page{
+    background-color: #8886d4;
+    color: #ffffff;
+}
+.am-btn-next{
+    background-color: #ff6633;
+    color: #ffffff;
+}
+.phone2{
+    width:150px ;
+    height: 63px;
+    background-color: #e53e49;
+    border-radius:8px ;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+.break1{
+    width:150px ;
+    height: 63px;
+    background-color: #fc5f7a;
+    border-radius:8px ;
+    border: 1px solid #ffffff;
+    background-image: url("../i/phone.png");
+    background-repeat: no-repeat;
+    background-position:30% center;
+    color: #ffffff;
+}
+.break2{
+    width:150px ;
+    height: 63px;
+    background-color: #e53e49;
+    border-radius:8px ;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+.am-btn-phone{
+    background-color: #33a2fc;
+    border: none;
+    color: #ffffff;
+}
+.icon1{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.icon2{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.submit-button button{
+    width: 167px;
+    height: 52px;
+    float: right;
+    margin-right: 270px;
+    margin-top: -10px;
+    border-radius: 8px;
+    background-color: #33a2fc;
+    color: #ffffff;
+}
+
+
+
+
+
+.evaluation1{
+    margin-top: 382px;
+    margin-left: -700px;
+}
+.account-score{
+    margin-top: -422px;
+    margin-left: 827px;
+}
+.evaluation2{
+    margin-top: 369px;
+    margin-left: 23px;
+}
+.query-information{
+    height: 700px;
+    margin-top: 50px;
+    background-color: #ffffff;
+}
+.evaluation-button button{
+    width: 225px;
+    height: 52px;
+    float: right;
+    margin-right: 278px;
+    margin-top: 30px;
+}
+.quality-note{
+    float: right;
+    margin-top: -328px;
+    margin-right: 346px;
+}
+.called-time{
+    margin-top: 20px;
+}
+.called-time div{
+    margin-top: -51px;
+    margin-left: 50px;
+    font-size: 20px;
+    color: #666666;
+}
+.called-note{
+    margin-top: 40px;
+}
+.called-note div{
+    margin-top: -51px;
+    margin-left: 50px;
+    font-size: 20px;
+    color: #666666;
+}
+.play-record{
+    margin-top: 40px;
+}
+.play-record div{
+    margin-top: -51px;
+    margin-left: 50px;
+    font-size: 20px;
+    color: #666666;
+}
+#record-called{
+    margin-left: 160px;
+    margin-top: 20px;
+    color: #000000;
+    padding-right: 200px;
+}
+.called-note1,.called-note2,.called-note3,.called-note4{
+    display: inline-block;
+    width: 48%;
+    margin-top: 20px;
+}
+#progress-bar{
+    margin-top: 40px;
+    width: 95%;
+    margin-left: 20px;
+    background-color: #e1dede;
+    border-radius: 9px;
+}
+.called-times{
+    margin-left: 370px;
+    margin-top: -20px;
+}
+.play-circle{
+    margin-top: -23px;
+    margin-left: -442px;
+    color: #359aff;
+}
+.play-circle2{
+    margin-top: -23px;
+    margin-left: -442px;
+    color: #ff6767;
+}
+
+
+
+a:focus, input[type=button] ,input[type=submit],button:focus,button:hover{ outline:none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

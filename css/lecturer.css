@@ -1,0 +1,90 @@
+.title2{
+	width: 57%;
+	height: 50px;
+			    line-height: 50px;
+			    background: url(../images/js.png) no-repeat 2% center;
+			    box-sizing: border-box;
+			    padding-left:3.5%;
+			    margin: 30px auto;
+			    border-bottom: 1px solid #2FB3FF;
+			    background-color: #fff;
+			    margin-bottom: 16px;
+			    -webkit-background-size: 35px;
+			    background-size: 35px;
+			    font-size: 24px;
+		}
+		.list{
+			float: left;
+		    width: 18%;
+		    height: 300px;
+		    position: relative;
+		    border: 1px solid #ddd;
+		    box-sizing: border-box;
+		    margin-right: 2%;
+		    overflow: hidden;	
+		}
+		.list:last-child{margin-right: 0;}
+		.list_bg{
+			position: absolute;
+			left: 0px;
+			top:0px;
+			width:100%;
+			height:40%;
+			background:url("../images/3.png") no-repeat center center;
+			-webkit-background-size: 100% 100%;
+			background-size: 100% 100%;
+		}
+		.list_te_img{
+			width: 70px;
+		    height: 70px;
+		    position: absolute;
+		    left: 50%;
+		    margin-left: -35px;
+		    top: 81px;
+		    z-index: 99;
+		    border-radius:50%;
+		}
+		.list_js{
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			width:100%;
+			height: 60%;
+			background-color: #fff;
+		}
+		.list_js_name{
+			width: 100%;
+		    height: 45px;
+		    line-height: 45px;
+		    font-size: 16px;
+		    color: #000;
+		    margin-top: 30px;
+		    text-align: center;
+		}
+		.describe{
+			width:100%;
+			height: 30px;
+			line-height:30px;
+			color:#000;
+			text-align: center;
+			font-size: 14px;
+		}
+		.learn{
+			position: absolute;
+			right: 5%;
+			bottom: 5px;
+			color:#aaa;
+			font-size: 12px;
+		}
+		.more1{
+			height: 135px;
+		    width: 30px;
+		    position: absolute;
+		    right: 21.6%;
+		    top: 68px;
+		    text-align: center;
+		    line-height: 150%;
+		    background: url(../images/more.png) no-repeat center 103px;
+		    background-size: 60%;
+		    cursor: pointer;
+		}

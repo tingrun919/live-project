@@ -1,0 +1,478 @@
+.lessee{
+    width: 100%;
+    height: 225px;
+    background-color: #e6e6e6;
+}
+.lessee img{
+    width: 164px;
+    height: 54px;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 23px;
+}
+.lessee div{
+    margin-bottom: 13px;
+}
+.lessee div span{
+    margin-left: 90px;
+}
+.build-user button{
+    width: 100%;
+    margin-top: 20px;
+}
+.data-export button{
+    width: 100%;
+    margin-top: 261%;
+}
+.data-extension button{
+    width: 100%;
+    margin-top: 200%;
+}
+.data-explicit-export button{
+    width: 100%;
+    margin-top: 200%;
+}
+.data-delete button{
+    margin-top: -75px;
+    width: 100%;
+    border-radius: 8px;
+}
+.save-change{
+    width: 100%;
+}
+.save-change button{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.user-lessee div{
+    display: inline-block;
+    width: 44%;
+    margin-left: 55px;
+    padding-top: 62px;
+}
+.account-list{
+    display: inline-block;
+    height: 300px;
+    border:1px solid #ffffff;
+    width: 30%;
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.account-list p{
+    font-size: 27px;
+    color: grey;
+    margin-top: 50px;
+}
+.account-list span{
+    font-size: 30px;
+    color: black;
+}
+.account-list div{
+    margin-top: 45px;
+}
+.account-list div button{
+    width: 170px;
+    height: 55px;
+    border: 2px solid #3598dc;
+    background-color: #ffffff;
+    color:#3598dc ;
+}
+#start-time{
+    width: 381px;
+    height: 50px;
+    border: 1px solid #e6e6e6;
+    margin-left: 0;
+}
+#end-time{
+    width: 381px;
+    height: 50px;
+    border: 1px solid #e6e6e6;
+    margin-left: 0;
+}
+#start-time a{
+   margin-left: 20px;
+    margin-top: -20px;
+}
+#end-time a{
+    margin-top: -20px;
+    margin-left: 20px;
+}
+.find-button button{
+    width: 100px;
+    height: 20px;
+    margin-top: 26px;
+}
+.check-table td{
+    text-align: center;
+}
+.check-table td input{
+    margin-left: 20px;
+}
+.table-head th{
+    text-align: center;
+}
+#qi{
+    width: 200px;
+    height: 50px;
+    float: left;
+    margin-left: 10px;
+    margin-top: -10px;
+}
+.qi-img{
+    width: 100%;
+    height: 54px;
+    background-image: url("../i/qi1.png");
+    background-repeat: no-repeat;
+}
+.qi-img p{
+    padding-left: 25px;
+    padding-top:14px ;
+    color: #ffffff;
+}
+.table-export button{
+    width: 100%;
+    margin-top: 283%;
+}
+.call-top{
+    margin-bottom: 50px;
+}
+.call-body{
+}
+.top-qi-img{
+    background-image: url("../i/qi1.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 54px;
+    margin-top: -22px;
+    margin-left: -23px;
+}
+.top-qi-img p{
+    padding-left: 15px;
+    padding-top: 10px;
+    color: #ffffff;
+}
+#model-qi{
+    background-image: url("../i/qi1.png");
+    background-repeat: no-repeat;
+}
+.user-model{
+    float: left;
+    margin-left: 52px;
+    margin-bottom: 6px;
+    margin-top: 20px;
+}
+.am-modal-footer{
+    margin-top: 50px;
+}
+.am-model-btn{
+    float: right;
+    width: 100px;
+}
+#tab2 input{
+    width: 100%;
+    height: 40px;
+}
+#tab1 input{
+    width: 100%;
+    height: 40px;
+}
+pre{font-family:'Î¢ÈíÑÅºÚ'}
+.box{width:67%; padding:10px 20px; background-color:#fff; margin-top: 10px;margin-left: -37px}
+.box a{padding-right:20px;}
+.demo3{margin:25px 0;}
+.inline div{
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    margin-left: 20px;
+}
+.inline button{
+    float: right;
+    margin-right: 138px;
+    margin-top: 40px
+}
+.am-form-group{
+    width: 300px;
+    height: 78px;
+    margin-left: -10px;
+    margin-top: 0;
+}
+.am-form-group1{
+    width: 300px;
+    height: 78px;
+    margin-left: -13px;
+    margin-top: 0;
+}
+.box-qi{
+    margin-left: 20px;
+    margin-top: 20px;
+    background-image: url("../i/qi1.png");
+    background-repeat: no-repeat;
+}
+.date-dosage div{
+    display: inline-block;
+    width: 18%;
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+.date1 p:first-child{
+    color: #3399ff;
+    font-size: 27px;
+}
+.date2 p:first-child{
+    color: #34cccc;
+    font-size: 27px;
+}
+.date3 p:first-child{
+    color: #ff9900;
+    font-size: 27px;
+}
+.date4 p:first-child{
+    color: #ffd97b;
+    font-size: 27px;
+}
+.date5{
+    margin-top: 20px;
+}
+.right-search{
+    margin-top: -281px;
+    margin-right:1px
+}
+.right-search button{
+    width: 67%;
+    margin-top: 102px;
+}
+.effective-time{
+    width: 80%;
+}
+.start-effectivce-time{
+    margin-left: 73px;
+    margin-top: 50px;
+}
+.end-effective-time{
+    margin-left: 424px;
+    margin-top: 30px;
+}
+.task-management{
+    display: inline-block;
+
+}
+.task-name{
+    width: 200px;
+    display: inline-block;
+    margin-left: -32px;
+    height: 80px;
+}
+.task-name p{
+    margin-left: -119px;
+    margin-bottom: 5px;
+}
+.task-name input{
+    margin-top: 12px;
+}
+.task-type{
+    width: 200px;
+    display: inline-block;
+    margin-left: 65px;
+    height: 80px;
+}
+.task-type p{
+    margin-left: -121px;
+    margin-bottom: -6px;
+}
+.task-type select{
+    margin-top: -10px;
+}
+.task-bd-title{
+    margin-left: -333px;
+}
+.task-time p{
+    margin-bottom: 5px;
+    margin-left: -48px;
+}
+.task-number{
+    width: 200px;
+    display: inline-block;
+    margin-left: -42px;
+    height: 80px;
+}
+.task-number p{
+    margin-bottom: 5px;
+    margin-left: -53px;
+}
+.task-number-2{
+    width: 200px;
+    display: inline-block;
+    margin-left: 53px;
+}
+.task-number-2 p{
+    margin-bottom: -43px;
+    margin-left: -31px;
+    height: 80px;
+}
+.task-number-2 button{
+    width: 44%;
+    margin-top: -3px;
+}
+.task-describe{
+    width: 100%;
+    height: 100px;
+    margin-left: -15px;
+}
+.task-describe p{
+    margin-left: -395px;
+    margin-bottom: 5px;
+}
+.task-describe input{
+    width: 490px;
+    height: 80px;
+}
+.query-plan{
+    float: left;
+    margin-left: 733px;
+    margin-top: -110px;
+}
+.query-table{
+    float: left;
+    margin-left: 1000px;
+    margin-top: -110px;
+}
+.query-state{
+    float: left;
+    margin-left: 51px;
+}
+.query-result{
+    float: left;
+    margin-left: 48px;
+}
+.query-number{
+    float: right;
+    margin-left: 20px;
+}
+.custom-query-table{
+    margin-top: 63px;
+}
+.account-name,.admin-account,.admin-password,.admin-phone,.admin-email{
+     display: inline-block;
+}
+.admin-account,.admin-password,.admin-phone,.admin-email,p{
+    margin-left: -2px;
+    margin-top: 10px;
+}
+.account-name{
+    width: 100%;
+    margin-left: -92px;
+}
+.admin-account{
+    width: 48%;
+    margin-left: -24px;
+}
+.admin-password{
+    width:48%;
+    margin-left: 30px;
+}
+.admin-email{
+    width: 48%;
+    margin-left: 30px;
+}
+.admin-phone{
+    width: 48%;
+    margin-left: -24px;
+}
+.top-qi-call{
+    background-image: url("../i/qi1.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 54px;
+    margin-top: -12px;
+    margin-left: -23px;
+}
+.am-form-model{
+    margin-left: 151px;
+    margin-bottom: 60px;
+}
+.am-form-model p{
+    margin-left: -267px;
+}
+#pass-audit{
+    float: right;
+    border:none;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+}
+#not-audit{
+    float: right;
+    border:none;
+    width: 100px;
+    height: 30px;
+    margin-right: 21px;
+}
+#delete-teacher{
+    float: right;
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin-right: 21px;
+}
+#box{
+    text-align: center;
+    font-size: 24px;
+    color: #1ab5ef;
+}
+#jiangshi{
+
+}
+.am-fr button{
+    border: none;
+    font-size: 13px;
+    padding: 8px;
+}
+#courses-to tr td{
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
+}
+#delete-courses-to{
+    float: right;
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin-right: 21px;
+}
+#pass-audit-courses{
+    float: right;
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin-right: 21px;
+}
+#query-pay{
+    margin-top: 26px;
+    width: 100px;
+    height: 37px;
+    border: none;
+    margin-left: 15px;
+}
+#delete-pay{
+    margin-top: 20px;
+    width: 100px;
+    height: 37px;
+    margin-left: 100px;
+    border: none;
+}
+#query-complete-pay{
+    margin-top: 20px;
+    width: 100px;
+    height: 37px;
+    border: none;
+}
+#sign-courses-to{
+    float: right;
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin-right: 21px;
+}

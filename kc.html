@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优秀视频—鲲鹏爱乐</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="./css/resect.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+	<style>
+		.main,.video{
+			height: auto
+		}
+		.kc_name{font-size: 18px}
+	</style>
+</head>
+<body>
+	<!-- 导航 -->
+	<iframe src="header.html" width="100%" height="165px"></iframe>
+	<!--  banner-->
+	<!-- 是否轮播 -->
+	<!-- 优秀视频展示 -->
+	<div class="title1"> 优秀课程</div>
+	<!-- 最近的课表（一周内显示周几，大于一周显示=日期） -->
+	<div class="syllabus">
+		<div class="main" id="syllabus">
+			<!-- 全屏时显示5个 也就是每个li的宽度为20% -->
+			<div class="li">
+				<img src="images/image3001.jpg" alt="" class="kb_img">
+				<div class="js">
+					<div class="kc_name">课程名</div>
+					<div class="te_name">
+						<img src="images/a.png" alt="" class="te_name_img">
+						<span class="n">name</span>
+					</div>
+					<div class="dy">1173人签到</div>
+					<div class="time">周六  9:00~10:00</div>
+				</div>
+			</div>
+			<div class="li">
+				<img src="images/image3001.jpg" alt="" class="kb_img">
+				<div class="js">
+					<div class="kc_name">课程名</div>
+					<div class="te_name">
+						<img src="images/a.png" alt="" class="te_name_img">
+						<span class="n">name</span>
+					</div>
+					<div class="dy">1173人签到</div>
+					<div class="time">周六  9:00~10:00</div>
+				</div>
+			</div>
+			<div class="li">
+				<img src="images/image3001.jpg" alt="" class="kb_img">
+				<div class="js">
+					<div class="kc_name">课程名</div>
+					<div class="te_name">
+						<img src="images/a.png" alt="" class="te_name_img">
+						<span class="n">name</span>
+					</div>
+					<div class="dy">1173人签到</div>
+					<div class="time">周六  9:00~10:00</div>
+				</div>
+			</div>
+			<div class="li">
+				<img src="images/image3001.jpg" alt="" class="kb_img">
+				<div class="js">
+					<div class="kc_name">课程名</div>
+					<div class="te_name">
+						<img src="images/a.png" alt="" class="te_name_img">
+						<span class="n">name</span>
+					</div>
+					<div class="dy">1173人签到</div>
+					<div class="time">周六  9:00~10:00</div>
+				</div>
+			</div>
+			<div class="li">
+				<img src="images/image3001.jpg" alt="" class="kb_img">
+				<div class="js">
+					<div class="kc_name">课程名</div>
+					<div class="te_name">
+						<img src="images/a.png" alt="" class="te_name_img">
+						<span class="n">name</span>
+					</div>
+					<div class="dy">1173人签到</div>
+					<div class="time">周六  9:00~10:00</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部栏(功能。服务。联系我们) -->
+	<footer>
+		<div class="main1" style="background-color:#424141">
+			<div class="f_l">
+				<div class="gn">功能</div>
+				<div class="gk"><a href="pay.html">购买课程</a></div>
+				<div class="ck"><a href="syllabus.html">购买课程</a></div>
+				<div class="jl"><a href="lecturer.html">讲师列表</a></div>
+			</div>
+			<div class="f_l">
+				<div class="gn">服务</div>
+				<div class="gk">收费说明</div>
+				<div class="ck">用户注册使用协议</div>
+				<div class="jl">讲师注册使用协议</div>
+			</div>
+			<div class="f_l">
+				<div class="gn">联系我们</div>
+				<div class="gk">办公地址XXXXXX</div>
+				<div class="ck">联系电话XXXXXX</div>
+				<div class="jl">服务邮箱XXXXXX</div>
+			</div>
+		</div>
+		<div class="ic">ICP备案XXXXXXXXXX</div>
+		<div class="bq">鲲鹏爱乐©版权所有</div>
+	</footer>
+	<script type="text/javascript">
+		function toPosition(){
+			window.location.href="position.html?";	
+		}
+		$(".sign_out").click(function(){
+    	sessionStorage.clear();
+    	 location.reload() 
+    	})
+    	var token=sessionStorage.getItem("aWebtoken");
+		var nick=sessionStorage.getItem("aNickname");
+		var aIfmember=sessionStorage.getItem("aIfmember");
+		console.log(token==null);
+		if(token==null){
+			$(".login").show();
+			$(".position").hide()
+		}else{
+			$(".login").hide();
+			$(".position").show()
+			$(".position span")[0].innerText=nick;
+		}
+		function getMyDay(date){
+			var week;
+			if(date.getDay()==0) week="周日"
+			if(date.getDay()==1) week="周一"
+			if(date.getDay()==2) week="周二"
+			if(date.getDay()==3) week="周三"
+			if(date.getDay()==4) week="周四"
+			if(date.getDay()==5) week="周五"
+			if(date.getDay()==6) week="周六"
+			return week;
+		}
+		function toVideo(e){
+			var aid=$(e)[0].dataset.aid;
+			window.location.href="lecturer_details.html?aid="+aid;
+		}
+		// 课程表
+		$(function(){
+			var token=sessionStorage.getItem("aWebtoken");
+			// 首页设置查询
+			$.ajax({
+				url:'http://47.94.251.233:8080/saxophone/saxo/goodclasses?webtoken='+token,
+				dataType:'jsonp',  
+        		jsonp:'callback', 
+				async:false,
+				success: function(res){
+					console.log(res);
+				if(res.code==100000){
+					if(res.data.length>0){
+						$("#syllabus")[0].innerHTML="";
+						for (var i = res.data.length - 1; i >= 0; i--) {
+							if(res.data[i].aCover!=""){
+								var w1 = getMyDay(new Date(res.data[i].aClbetime));
+								var w2= getMyDay(new Date(res.data[i].aClendtime));
+								$('#syllabus').append('<div class="li" data-aid="'+res.data[i].aUserid+'" onclick="toVideo(this)"><img src="images/4.png" alt="" class="kb_img"><div class="js"><div class="kc_name">'+res.data[i].aClassname+'</div><div class="te_name"></div><div class="dy">'+res.data[i].signnumber+'人签到</div><div class="time">'+w1+'~'+w2+'\n'+res.data[i].aBegintime+'~'+res.data[i].aEndtime+'</div></div></div>')
+							}else{
+								var w1 = getMyDay(new Date(res.data[i].aClbetime));
+								var w2= getMyDay(new Date(res.data[i].aClendtime));
+								$('#syllabus').append('<div class="li"  data-aid="'+res.data[i].aUserid+'" onclick="toVideo(this)"><img src="images/4.png" alt="" class="kb_img"><div class="js"><div class="kc_name">'+res.data[i].aClassname+'</div><div class="te_name"></div><div class="dy">'+res.data[i].signnumber+'人签到</div><div class="time">'+w1+'~'+w2+' \n   '+res.data[i].aBegintime+'~'+res.data[i].aEndtime+'</div></div></div>')
+							}
+						}
+					}else{
+
+					}
+					
+					
+				}else{
+					alert(res.message);
+				}
+			},
+		})
+    	// 首页讲师列表
+		})
+	</script>
+
+</body>
+</html>	

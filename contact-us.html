@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>联系我们</title>
+    <meta content="width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0,maximum-scale=3.0" id="viewport" name="viewport">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/resect.css">
+    <link rel="stylesheet" href="css/style1.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <style type="text/css">
+        .col-md-2{width:19%;padding-left: 0}
+        .row{padding:0px;}
+        .col-md-2 p{ 
+            width:100%;
+
+            height: 50px;
+            line-height: 50px
+         }
+    </style>
+</head>
+<body>
+<iframe src="header.html" width="100%" height="165px"></iframe>
+<div id="container">
+    <div class="container1">
+        <div class="container">
+            <div class="row" style="text-align: center">
+                <div class="contact-heading">
+                    <h2>联系我们</h2>
+                    <img class="img-responsive" src="img/daag.png" alt="">
+                </div>
+                <div class="col-md-2 col-md-offset-1 col-xs-12 col-sm-12">
+                    <i class="fa fa-phone" style="font-size: 2em;color: #008DD5"></i>
+                    <p>电话: 0531-55554894</p>
+                    <p>传真: 0531-88888888</p>
+                </div>
+                <div class="col-md-2 col-md-offset-2 col-xs-12 col-sm-12">
+                    <i class="fa fa-map-marker" style="font-size: 2em;color: #008DD5"></i>
+                    <p>山东省济南市高新区</p>
+                    <p>舜华南路舜泰广场九号楼</p>
+                </div>
+                <div class="col-md-2 col-md-offset-2 col-xs-12 col-sm-12">
+                    <i class="fa fa-envelope-o" style="font-size: 2em;color: #008DD5"></i>
+                    <p>lsjs@sina.com</p>
+                </div>
+                <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12">
+                    <img src="img/s1.png" alt="" class="img-responsive"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 底部栏(功能。服务。联系我们) -->
+    <footer>
+        <div class="main1" style="background-color:#424141">
+            <div class="f_l">
+                <div class="gn">功能</div>
+                <div class="gk"><a href="pay.html">购买课程</a></div>
+                <div class="ck"><a href="syllabus.html">购买课程</a></div>
+                <div class="jl"><a href="lecturer.html">讲师列表</a></div>
+            </div>
+            <div class="f_l">
+                <div class="gn">服务</div>
+                <div class="gk">收费说明</div>
+                <div class="ck">用户注册使用协议</div>
+                <div class="jl">讲师注册使用协议</div>
+            </div>
+            <div class="f_l">
+                <div class="gn">联系我们</div>
+                <div class="gk">办公地址XXXXXX</div>
+                <div class="ck">联系电话XXXXXX</div>
+                <div class="jl">服务邮箱XXXXXX</div>
+            </div>
+        </div>
+        <div class="ic">ICP备案XXXXXXXXXX</div>
+        <div class="bq">鲲鹏爱乐©版权所有</div>
+    </footer>
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+     var token=sessionStorage.getItem("aWebtoken");
+        var nick=sessionStorage.getItem("aNickname");
+        console.log(token);
+        if(token==null){
+            $(".login").show();
+            $(".position").hide()
+        }else{
+            $(".login").hide();
+            $(".position").show()
+            $(".position span")[0].innerText=nick;
+        }
+        $(".sign_out").click(function(){
+            sessionStorage.clear();
+            location.reload() 
+        })
+</script>
+</body>
+</html>

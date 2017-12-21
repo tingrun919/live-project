@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页</title>
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="assets/i/2.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body data-type="generalComponents">
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <a href="" class="tpl-logo">
+            <img src="assets/image/logo.png" alt="">
+        </a>
+    </div>
+    <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+            <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                    <span class="tpl-header-list-user-nick">管理员小王</span>
+                        <span class="tpl-header-list-user-ico">
+                            <img src="assets/image/user01.png">
+                        </span>
+                </a>
+                <ul class="am-dropdown-content">
+                    <!--<li><a href="#"><span class="am-icon-user"></span> 资料</a></li>-->
+                    <!--<li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>-->
+                    <li><a href="index.html"><span class="am-icon-power-off"></span> 退出</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="tpl-page-container tpl-page-header-fixed">
+    <div class="tpl-left-nav tpl-left-nav-hover">
+        <div class="tpl-left-nav-title">
+            管理列表
+        </div>
+        <div class="tpl-left-nav-list">
+            <ul class="tpl-left-nav-menu">
+                <li class="tpl-left-nav-item">
+                    <a href="shouye.html" class="nav-link active">
+                        <i class="am-icon-home"></i>
+                        <span>首页管理</span>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-leanpub"></i>
+                        <span>讲师管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="teach-pass-aduit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>讲师列表</span>
+                            </a>
+                            <a href="teach-not-pass.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未通过</span>
+                            </a>
+                            <a href="to-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>待审核</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-table"></i>
+                        <span>课程管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="courses-pass-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>审核通过课程</span>
+                            </a>
+                            <a href="courses-not-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未通过审核课程</span>
+                            </a>
+                            <a href="courses-to-audit.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>未审核课程</span>
+                            </a>
+                            <a href="courses-manage.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>课程签到统计</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-shopping-bag"></i>
+                        <span>付费管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="set-pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>付费价格设置</span>
+                            </a>
+                            <a href="pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>付费订单管理</span>
+                            </a>
+                            <a href="complete-pay.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>支付完成订单</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="tpl-content-wrapper">
+        <div class="tpl-content-page-title">
+            首页视频设置
+        </div>
+        <div class="tpl-portlet-components">
+            <div class="tpl-block">
+                <div class="row">
+                    <div class="am-g am-u-lg-12 am-u-md-12 am-u-sm-12">
+                        <div class="am-u-sm-12">
+                            <div id="box"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="text-align: center">
+                    <video controls="controls" width="1000px" height="500px">
+                        <source src="assets/image/56.mp4" type="video/mp4"/>
+                        你的浏览器不支持HTML5视频标签，请更换浏览器后重试
+                    </video>
+                </div>
+            </div>
+            <div class="tpl-alert"></div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/iscroll.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/index.js"></script>
+<script>
+    function GetArgsFromHref(sHref, sArgName){
+        var args    = sHref.split("?");
+        var retval = "";
+
+        if(args[0] == sHref) /*参数为空*/
+        {
+            return retval; /*无需做任何处理*/
+        }
+        var str = args[1];
+        args = str.split("&");
+        for(var i = 0; i < args.length; i ++)
+        {
+            str = args[i];
+            var arg = str.split("=");
+            if(arg.length <= 1) continue;
+            if(arg[0] == sArgName) retval = arg[1];
+        }
+        return retval;
+    }
+
+    console.log(window.location.href);
+    console.log(encodeURI(window.location.href))
+    var url =GetArgsFromHref(window.location.href, 'url');
+    console.log(url);
+</script>
+</body>
+</html>

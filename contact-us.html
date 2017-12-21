@@ -82,7 +82,7 @@
      var token=sessionStorage.getItem("aWebtoken");
         var nick=sessionStorage.getItem("aNickname");
         console.log(token);
-        if(token==null){
+        if(token==null || token==''){
             $(".login").show();
             $(".position").hide()
         }else{

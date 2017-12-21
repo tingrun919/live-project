@@ -12,7 +12,7 @@ passTeacher();
 function passTeacher(){
     $.ajax({
         dataType:'jsonp',
-        url:'http://47.94.251.233:8080/saxophone/saxo/lqeeManager?token='+token+'&state='+2,
+        url:'http://47.104.18.202:8080/saxophone/saxo/lqeeManager?token='+token+'&state='+2,
         success:function(data){
             console.log(data);
             var datas=data.data;

@@ -20,7 +20,7 @@ function payOrder(){
     //if(start_time){}
     $.ajax({
         dataType:'jsonp',
-        url:'http://47.94.251.233:8080/saxophone/saxo/ordermanager?token='+token+'&state='+0,
+        url:'http://47.104.18.202:8080/saxophone/saxo/ordermanager?token='+token+'&state='+0,
         data:{"begintime":start_time,"endtime":end_time,"ordercode":pay_order,"pagenumber":10,"page":pa},
         success:function(data){
             console.log(data);
@@ -110,7 +110,7 @@ $("#delete-pay").click(function(){
         var aId={"aid":s};
         console.log(aId);
         $.ajax({
-            url:'http://47.94.251.233:8080/saxophone/saxo/delrecharge?token='+token,
+            url:'http://47.104.18.202:8080/saxophone/saxo/delrecharge?token='+token,
             type:'post',
             dataType:'jsonp',
             data:aId,

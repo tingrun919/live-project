@@ -1,379 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>课时表</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="./css/resect.css">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	 <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="./css/swiper.min.css">
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-	<script src="./js/swiper.min.js"></script>
-	<style type="text/css">
-	    .swiper-slide {
-	        text-align: center;
-	        font-size: 18px;
-	        background: #fff;
-	        display: -webkit-box;
-	        display: -ms-flexbox;
-	        display: -webkit-flex;
-	        display: flex;
-	        -webkit-box-pack: center;
-	        -ms-flex-pack: center;
-	        -webkit-justify-content: center;
-	        justify-content: center;
-	        -webkit-box-align: center;
-	        -ms-flex-align: center;
-	        -webkit-align-items: center;
-        	align-items: center;
-        	position: relative;
-   	    }
-   	    .title{background:url(images/kcb.png) no-repeat center center;}
-		.main{height: auto}
-   	    .m1{
-   	    	width:100%;
-	        min-height: 550px;
-	        margin: 0 auto;
-	         position: relative;
-	        background-color: #fff;	
-   	    }
-   	    .swiper-container1 {
-   	    		color: #fff;
-	           	width: 85%;
-			    min-height: 700px;
-			    margin: 0 auto;
-			    background-color: #efeff4;
-			    overflow: hidden;
-			    position: relative;
-			   /* padding-left: 20px;
-			    padding-right: 20px;*/
-    	}
-    	.data{
-    		display: block;
-    		width:100%;
-    		height: 80px;
-    		padding-left: 20px;
-    		box-sizing: border-box;
-    		line-height: 40px;
-			b/*order-bottom: 1px solid #000;*/
-    	}
-    	.data p{ text-align: left; }
-    	.xq{
-    		font-size: 20px;
-    		font-weight: bold;
-    	}
-    	.rq{
-    		font-size: 20px;
-    		font-weight: bold;
-    	}
-    	.list{
-			width:100%;
-			height: auto;
-    		text-align: center;
-			background-color: #fff;
-    		/*
-			border-bottom: 1px solid #000;*/
-
-    	}
-    	.swiper-slide{
-    		background-color: #fff;
-    		display: block;
-    		
-    	}
-    	
-    	.swiper-slide .data{
-    		background-color: #3A9CFD;
-    	}
-    	.time{
-    		width:100%;
-    		line-height: 50px;
-    		text-align:left;
-    		font-size: 22px;
-    		color: #3A9CFD;
-    		padding-left: 20px;
-    		box-sizing: border-box;
-    	}
-    	.name{
-    		width:100%;
-    		position: initial;
-    		line-height: 50px;
-    		padding-left: 20px;
-    		box-sizing: border-box;
-    		text-align: left;
-    		color:#424141;
-    		font-size: 18px;
-    		font-weight: bold;	
-    	}
-    	.teacher{
-    		line-height: 50px;
-    		text-align: left;
-    		padding-left: 20px;
-    		color: #5d5555;
-    		font-size: 14px;
-
-    	}
-    	.list:hover{
-    		box-shadow: 0px 1px 15px #000;;
-    	}
-    	.swiper-button-next{right: 28px}
-    	.swiper-button-prev{left: 28px}
-    	.img{
-    		width:20px;
-    		height: 20px;
-    		border-radius: 50%;
-    		vertical-align: middle;
-    		margin-right: 10px;
-    	}
-    	.zbz{
-    		width:46px;
-    		line-height: 2px;
-    		margin-left: 20px;
-    		padding: 5px;
-    		text-align: center;
-    		border:1px solid #52C383;
-    		color: #52C383;
-
-    	}
-    	.wks{
-    		width:46px;
-    		line-height:0px ;
-    		margin-left:20px;
-    		padding: 10px;
-    		text-align: center;
-    		border:1px solid #ddd;
-    		color: #5d5555;
-    	}
-    	.ywc{
-    		width:46px;
-    		line-height: 0px;
-    		margin-left: 20px;
-    		padding: 10px;
-    		text-align: center;
-
-    		border:1px solid #3A9CFD;
-    		color: #3A9CFD;
-    	}
-	</style>
-</head>
-<body>
-	<!-- 导航 -->
-	<iframe src="header.html" width="100%" height="200px"></iframe>
-	<!--  课程表-->
-		<div class="title" id="kcb"></div>
-		<div class="main">
-			 <div class="m1">
-				<div class="swiper-container1">
-			        <div class="swiper-wrapper" id="swiper-wrapper">
-			            
-							
-			        </div>
-			        <!-- Add Pagination -->
-			       
-		    	</div>
-		    	<div class="swiper-button-prev"></div>
-    			<div class="swiper-button-next"></div>
-			 </div>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>课时表</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/kc-index.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="title">
+			<div class="container">
+				<div class="title_bg">
+					<span id="start">
+						2017年12月19日
+					</span>
+					至
+					<span id="end">
+						2017年12月26日
+					</span>
+				</div>
+				<div class="ke k1">
+					<div class="rl_bg_yellow t">
+						今天
+					</div>
+					<div class="row"></div>
+				</div>
+				<div class="ke k2">
+					<div class="rl_bg_blue t">
+						明天
+					</div>
+					<div class="row"></div>
+				</div>
+				<div class="ke k3">
+					<div class="rl_bg_green t">
+						12.21
+					</div>
+					<div class="row"></div>
+				</div>
+				<div class="k4">
+					<div class="rl_bg_green t">
+						12.21
+					</div>
+					<div class="row"></div>
+				</div>
+				<div class="k5">
+					<div class="rl_bg_green t">
+						12.21
+					</div>
+					<div class="row"></div>
+				</div>
+				<div class="k6">
+					<div class="rl_bg_green t">
+						12.21
+					</div>
+					<div class="row"></div>
+				</div>
+				<div class="k7">
+					<div class="rl_bg_green t">
+						12.21
+					</div>
+					<div class="row"></div>
+				</div>
+				
+			</div>
+			<div class="btn_grow">
+					<span id="left">
+						上一周
+					</span>
+					<span id="right">
+						下一周
+					</span>
+				</div>
 		</div>
-    <script>
-    var token=sessionStorage.getItem("aWebtoken");
-		var nick=sessionStorage.getItem("aNickname");
-		console.log(token);
-		if(token==null){
-			$(".login").show();
-			$(".position").hide()
-		}else{
-			$(".login").hide();
-			$(".position").show()
-			$(".position span")[0].innerText=nick;
-		}
-		$(".sign_out").click(function(){
-    		sessionStorage.clear();
-    	 	location.reload() 
-    	})
-		function toRoom(e){
-			var aid=$(e)[0].dataset.aid;
-			window.location.href="chatroom.html?aid="+aid;
-		}
-    function getMyDay(date){
-			var week;
-			if(date.getDay()==0) week="周日"
-			if(date.getDay()==1) week="周一"
-			if(date.getDay()==2) week="周二"
-			if(date.getDay()==3) week="周三"
-			if(date.getDay()==4) week="周四"
-			if(date.getDay()==5) week="周五"
-			if(date.getDay()==6) week="周六"
-			return week;
-		}
-	Array.prototype.unique3 = function(){
-		 	var res = [];
-		 	var json = {};
-			for(var i = 0; i < this.length; i++){
-		  		if(!json[this[i]]){
-		   			res.push(this[i]);
-		   			json[this[i]] = 1;
-		  		}
-		 }
-		 return res;
-		}
-		var page=0;
-   	$.ajax({
-		url:'http://47.94.251.233:8080/saxophone/saxo/classdeailed?webtoken='+token+"&page="+page,
-		dataType:'jsonp',  
-        jsonp:'callback', 
-		async:false,
-		success: function(res){
-			console.log(res);
-			console.log(w1===w2);
-			if (res.code==100000) {
-				var w1=[];
-	       		 for (var i=1;i<res.data.length;i++){
-				// 判断时间
-					w1.push(getMyDay(new Date(res.data[i].aClasstime))+" "+res.data[i].aClasstime);
-				}
-				var w2=w1.unique3();
-				console.log(w2);
-				var num;
-				if(w2.length>7){
-					num=7;
-				}else if(w2.length<7){
-					num=w2.length;
-				}
-				$("#swiper-wrapper")[0].innerHTML="";
-				var color=["#3A9CFD","#45A4FD","#53AEFD","#69BCFC","#7BC9FD","#48b3ef","#80cbf5"];
-				var int=0;
-				for(var i=0;i<w2.length;i++){
-					console.log("111111");
-					var time=w2[i].split(" ")[1].split("-")[1].split("0")[1]+"月"+w2[i].split(" ")[1].split("-")[2]+"日";
-					console.log(time)
+		<script>
+			var token=sessionStorage.getItem("aWebtoken");
+			function toRoom(e){
+				var aid=$(e)[0].dataset.aid;
+				window.location.href="chatroom.html?aid="+aid;
+			}
+    		function getMyDay(date){
+				var week;
+				if(date.getDay()==0) week="周日"
+				if(date.getDay()==1) week="周一"
+				if(date.getDay()==2) week="周二"
+				if(date.getDay()==3) week="周三"
+				if(date.getDay()==4) week="周四"
+				if(date.getDay()==5) week="周五"
+				if(date.getDay()==6) week="周六"
+				return week;
+			}
+			Array.prototype.unique3 = function(){
+			 	var res = [];
+			 	var json = {};
+				for(var i = 0; i < this.length; i++){
+			  		if(!json[this[i]]){
+			   			res.push(this[i]);
+			   			json[this[i]] = 1;
+			  		}
+			 }
+			 return res;
+			}
+			var page=0;
+			$.ajax({
+				url:'http://47.104.18.202:8080/saxophone/saxo/classdeailed?webtoken='+token+"&page="+page,
+				dataType:'jsonp',  
+        		jsonp:'callback', 
+				async:false,
+				success: function(res){
+					console.log(res);
+					console.log(w1===w2);
+					if (res.code==100000) {
+						var w1=[];
+	       		 		for (var i=1;i<res.data.length;i++){
+						// 判断时间
+						w1.push(getMyDay(new Date(res.data[i].aClasstime))+" "+res.data[i].aClasstime);
+					}
+					var w2=w1.unique3();
+					console.log(w2);
+					var num;
+					if(w2.length>7){
+						num=7;
+					}else if(w2.length<7){
+						num=w2.length;
+					}
+					var int=0;
+					var time1=[];
+					for(var i=0;i<w2.length;i++){
+//					var time=w2[i].split(" ")[1].split("-")[1].split("0")[1]+"月"+w2[i].split(" ")[1].split("-")[2]+"日";
+						var time=w2[i].split(" ")[1].split("-")[0]+"年"+w2[i].split(" ")[1].split("-")[1]+"月"+w2[i].split(" ")[1].split("-")[2]+"日";				
+					time1.push(time)	
+					console.log( time)
+					
 					if(int==7){
 						int=0;
 					}
-					$("#swiper-wrapper").append('<div class="swiper-slide"><div class="data" style="background-color:'+color[int]+'"><p class="xq">'+w2[i].split(" ")[0]+'</p><p class="rq">'+time+'</p></div></div>');
-					int++;
-					var swiper = new Swiper('.swiper-container1', {
-						prevButton:'.swiper-button-prev',
-						nextButton:'.swiper-button-next',
-						paginationClickable: true,
-						slidesPerView:num,
-						spaceBetween: 0,
-						breakpoints: {
-							1024: {
-							    slidesPerView: 4,
-							    spaceBetween:0
-							},
-							768: {
-							    slidesPerView: 3,
-							    spaceBetween:0
-							},
-							640: {
-							    slidesPerView: 2,
-							    spaceBetween:0
-							},
-							320: {
-							    slidesPerView: 1,
-							    spaceBetween:0
-							}
-						},
-						onTouchEnd: function(swiper){
-							page=page+1
-	    					$.ajax({
-								url:'http://47.94.251.233:8080/saxophone/saxo/classdeailed?webtoken='+token+"&page="+page,
-								dataType:'jsonp',  
-								jsonp:'callback', 
-								async:false,
-								success: function(res){
-									console.log(res);
-									if (res.code==100000) {
-										var w1=[];
-										for (var i=1;i<res.data.length;i++){
-											w1.push(getMyDay(new Date(res.data[i].aClasstime))+" "+res.data[i].aClasstime);
-										}
-										var w2=w1.unique3();
-										console.log(w2);
-										for(var i=0;i<w2.length;i++){
-											console.log("111111");
-											var time=w2[i].split(" ")[1].split("-")[1].split("0")[1]+"月"+w2[i].split(" ")[1].split("-")[2]+"日";
-											console.log(time)
-											if(int==7){
-												int=0;
-											}
-											$("#swiper-wrapper").append('<div class="swiper-slide"><div class="data" style="background-color:'+color[int]+'"><p class="xq">'+w2[i].split(" ")[0]+'</p><p class="rq">'+time+'</p></div></div>');
-											int++;
-											var swiper = new Swiper('.swiper-container1', {
-												prevButton:'.swiper-button-prev',
-												nextButton:'.swiper-button-next',
-												paginationClickable: true,
-												slidesPerView:num,
-												spaceBetween:0,
-												breakpoints: {
-													1024: {
-														slidesPerView: 4,
-														spaceBetween: 0
-													},
-													768: {
-														slidesPerView: 3,
-														spaceBetween: 0
-													},
-													640: {
-														slidesPerView: 2,
-														spaceBetween: 0
-													},
-													320: {
-														slidesPerView: 1,
-														spaceBetween: 0
-													}
-												},
-															       
-											});
-										}
-									for(var i=0;i<w2.length;i++){
-										for(var j=0;j<res.data.length;j++){
-											console.log(w2[i]==getMyDay(new Date(res.data[j].aClasstime)));
-											if(w2[i].split(" ")[0]===getMyDay(new Date(res.data[j].aClasstime))){
-												 if(res.data[j].aState==0){
-												 	$(ss).append('<div class="list"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher wks">未开始</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
-												 }else if(res.data[j].aState==1){
-												 	var ss=$(".swiper-slide")[i];
-												 		$(ss)[0].style.backgroundColor=bg3();
-												 	$(ss).append('<div class="list" onclick="toRoom(this)" data-aid="'+res.data[j].aUserid+'"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher zbz">直播中</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
-												 }else if(res.data[j].aState==2){
-												 	$(ss).append('<div class="list"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher ywc">直播完成</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
-												}
-											}
-										}
-									}
-										}else{
-													
-										}
-									},
-								})
-    						}
-						});
+				}
+				console.log(w2[0].split(" ")[1]==res.data[0].aClasstime)
+				for(var j=0;j<w2.length;j++){
+					if(j>1){
+						var t=$(".t")[j];
+						$(t)[0].innerText=w2[j].split(" ")[1].split("-")[1]+"."+w2[j].split(" ")[1].split("-")[2];
 					}
-					for(var i=0;i<w2.length;i++){
-						for(var j=0;j<res.data.length;j++){
-							console.log(w2[i]==getMyDay(new Date(res.data[j].aClasstime)));
-							if(w2[i].split(" ")[0]===getMyDay(new Date(res.data[j].aClasstime))){
-								if(res.data[j].aState==0){
-									var ss=$(".swiper-slide")[i];
-									$(ss).append('<div class="list"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher wks">未开始</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
-								}else if(res.data[j].aState==1){
-									var ss=$(".swiper-slide")[i];
-									$(ss).append('<div class="list" onclick="toRoom(this)" data-aid="'+res.data[j].aUserid+'"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher zbz">正在直播</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
-								}else if(res.data[j].aState==2){
-									var ss=$(".swiper-slide")[i];
-									$(ss).append('<div class="list"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher ywc">直播完成</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
-								}
-							}
+					for(var i=0;i<res.data.length;i++){
+						if(w2[j].split(" ")[1]==res.data[i].aClasstime){
+							var row=$(".row")[j];
+							$(row).append('<div class="col-xs-6 col-sm-4 col-md-3"><div class="img_box"><img src="'+res.data[i].aPortrait+'" class="kc_img"/></div><p class="kc_name">'+res.data[i].aClassname+'</p><p class="kc_time">'+w2[j].split(" ")[0]+"  "+res.data[i].aBegintime+"~"+res.data[i].aEndtime+'</p><p class="kc_number">学习人数：<span class="number">123</span></p></div>')
 						}
-					}
-				}else{
+					}	
+				}
+				
+				$("#start")[0].innerText=time1[0];
+				$("#end")[0].innerText=time1[6];
+			}else{
 				
 			}
 		},
 	})
-    </script>
-</body>
+		$("#left").click(function(){
+			if(page==0){
+				alert("不能再往前了")
+			}else{
+				page=page-1;
+				$.ajax({
+				url:'http://47.104.18.202:8080/saxophone/saxo/classdeailed?webtoken='+token+"&page="+page,
+				dataType:'jsonp',  
+        		jsonp:'callback', 
+				async:false,
+				success: function(res){
+					console.log(res);
+					console.log(w1===w2);
+					if (res.code==100000) {
+						$(".row").empty();
+						var w1=[];
+	       		 		for (var i=1;i<res.data.length;i++){
+						// 判断时间
+						w1.push(getMyDay(new Date(res.data[i].aClasstime))+" "+res.data[i].aClasstime);
+					}
+					var w2=w1.unique3();
+					console.log(w2);
+					var num;
+					if(w2.length>7){
+						num=7;
+					}else if(w2.length<7){
+						num=w2.length;
+					}
+					var int=0;
+					var time1=[];
+					for(var i=0;i<w2.length;i++){
+//					var time=w2[i].split(" ")[1].split("-")[1].split("0")[1]+"月"+w2[i].split(" ")[1].split("-")[2]+"日";
+						var time=w2[i].split(" ")[1].split("-")[0]+"年"+w2[i].split(" ")[1].split("-")[1]+"月"+w2[i].split(" ")[1].split("-")[2]+"日";				
+					time1.push(time)	
+					console.log( time)
+					
+					if(int==7){
+						int=0;
+					}
+				}
+				console.log(w2[0].split(" ")[1]==res.data[0].aClasstime)
+				for(var j=0;j<w2.length;j++){
+						if(page==0){
+							if(j>1){
+								var t=$(".t")[j];
+								$(t)[0].innerText=w2[j].split(" ")[1].split("-")[1]+"."+w2[j].split(" ")[1].split("-")[2];
+							}
+						}else{
+							var t=$(".t")[j];
+							$(t)[0].innerText=w2[j].split(" ")[1].split("-")[1]+"."+w2[j].split(" ")[1].split("-")[2];
+						}
+					for(var i=0;i<res.data.length;i++){
+						if(w2[j].split(" ")[1]==res.data[i].aClasstime){
+							var row=$(".row")[j];
+							$(row).append('<div class="col-xs-6 col-sm-4 col-md-3"><div class="img_box"><img src="'+res.data[i].aPortrait+'" class="kc_img"/></div><p class="kc_name">'+res.data[i].aClassname+'</p><p class="kc_time">'+w2[j].split(" ")[0]+"  "+res.data[i].aBegintime+"~"+res.data[i].aEndtime+'</p><p class="kc_number">学习人数：<span class="number">123</span></p></div>')
+						}
+					}	
+				}
+				
+				$("#start")[0].innerText=time1[0];
+				$("#end")[0].innerText=time1[6];
+			}else{
+				
+			}
+		},
+	})
+	}
+})
+		$("#right").click(function(){
+			page=page+1;
+			$.ajax({
+				url:'http://47.104.18.202:8080/saxophone/saxo/classdeailed?webtoken='+token+"&page="+page,
+				dataType:'jsonp',  
+        		jsonp:'callback', 
+				async:false,
+				success: function(res){
+					console.log(res);
+					console.log(w1===w2);
+					if (res.code==100000) {
+						$(".row").empty();
+						var w1=[];
+	       		 		for (var i=1;i<res.data.length;i++){
+						// 判断时间
+						w1.push(getMyDay(new Date(res.data[i].aClasstime))+" "+res.data[i].aClasstime);
+					}
+					var w2=w1.unique3();
+					console.log(w2);
+					var num;
+					if(w2.length>7){
+						num=7;
+					}else if(w2.length<7){
+						num=w2.length;
+					}
+					var int=0;
+					var time1=[];
+					for(var i=0;i<w2.length;i++){
+//					var time=w2[i].split(" ")[1].split("-")[1].split("0")[1]+"月"+w2[i].split(" ")[1].split("-")[2]+"日";
+						var time=w2[i].split(" ")[1].split("-")[0]+"年"+w2[i].split(" ")[1].split("-")[1]+"月"+w2[i].split(" ")[1].split("-")[2]+"日";				
+					time1.push(time)	
+					console.log( time)
+					
+					if(int==7){
+						int=0;
+					}
+				}
+				console.log(w2[0].split(" ")[1]==res.data[0].aClasstime)
+				for(var j=0;j<w2.length;j++){
+						var t=$(".t")[j];
+						$(t)[0].innerText=w2[j].split(" ")[1].split("-")[1]+"."+w2[j].split(" ")[1].split("-")[2];
+					for(var i=0;i<res.data.length;i++){
+						if(w2[j].split(" ")[1]==res.data[i].aClasstime){
+							var row=$(".row")[j];
+							$(row).append('<div class="col-xs-6 col-sm-4 col-md-3"><div class="img_box"><img src="'+res.data[i].aPortrait+'" class="kc_img"/></div><p class="kc_name">'+res.data[i].aClassname+'</p><p class="kc_time">'+w2[j].split(" ")[0]+"  "+res.data[i].aBegintime+"~"+res.data[i].aEndtime+'</p><p class="kc_number">学习人数：<span class="number">123</span></p></div>')
+						}
+					}	
+				}
+				
+				$("#start")[0].innerText=time1[0];
+				$("#end")[0].innerText=time1[6];
+			}else{
+				
+			}
+		},
+	})
+		})
+		</script>
+	</body>
 </html>

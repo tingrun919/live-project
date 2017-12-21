@@ -89,7 +89,7 @@
 		console.log($(this));
 		var tele=$("#tele").val();
 		$.ajax({
-			url:"http://47.94.251.233:8080/saxophone/saxo/getPCpwdCode?phone="+tele,
+			url:"http://47.104.18.202:8080/saxophone/saxo/getPCpwdCode?phone="+tele,
 			async : false,
  			dataType:'jsonp',  
         	jsonp:'callback', 
@@ -115,7 +115,7 @@
 			alert("两次输入的密码不一致");
 		}else{
 			$.ajax({
-		url: 'http://47.94.251.233:8080/saxophone/saxo/editPCwropwd',
+		url: 'http://47.104.18.202:8080/saxophone/saxo/editPCwropwd',
 		type: 'post',
 		dataType:'jsonp',  
         jsonp:'callback', 

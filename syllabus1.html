@@ -2,20 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>课时表</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="./css/resect.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 	 <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="./css/swiper.min.css">
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script src="./js/swiper.min.js"></script>
 	<style type="text/css">
-		body{
-			width:100%;
-			height:100%;
-			background: url(images/bg.png) left top repeat;
-		}
-		
 	    .swiper-slide {
 	        text-align: center;
 	        font-size: 18px;
@@ -34,47 +29,38 @@
         	align-items: center;
         	position: relative;
    	    }
-   	    .title{
-   	    	width:55%;
-   	    	height: 50px;
-   	    	line-height: 50px;
-   	    	text-align: center;
-   	    	font-size: 24px;
-   	    	color: #000;
-   	    	padding:20px;
-   	    	background-color: #fff;
-   	    	margin: 20px auto;
-
-   	    }
+   	    .title{background:url(images/kcb.png) no-repeat center center;}
+		.main{height: auto}
    	    .m1{
-   	    	width: 55%;
+   	    	width:100%;
 	        min-height: 550px;
 	        margin: 0 auto;
-	         padding:20px;
 	         position: relative;
 	        background-color: #fff;	
    	    }
    	    .swiper-container1 {
    	    		color: #fff;
 	           	width: 85%;
-			    min-height: 550px;
+			    min-height: 700px;
 			    margin: 0 auto;
-			    background-color: #fff;
+			    background-color: #efeff4;
 			    overflow: hidden;
 			    position: relative;
-			    padding-left: 20px;
-			    padding-right: 20px;
+			   /* padding-left: 20px;
+			    padding-right: 20px;*/
     	}
     	.data{
     		display: block;
     		width:100%;
     		height: 80px;
-    		text-align: center;
+    		padding-left: 20px;
+    		box-sizing: border-box;
     		line-height: 40px;
-			border-bottom: 1px solid #ddd;
+			b/*order-bottom: 1px solid #000;*/
     	}
+    	.data p{ text-align: left; }
     	.xq{
-    		font-size: 24px;
+    		font-size: 20px;
     		font-weight: bold;
     	}
     	.rq{
@@ -83,41 +69,98 @@
     	}
     	.list{
 			width:100%;
+			height: auto;
     		text-align: center;
-			border-bottom: 1px solid #ddd;
+			background-color: #fff;
+    		/*
+			border-bottom: 1px solid #000;*/
 
     	}
     	.swiper-slide{
+    		background-color: #fff;
     		display: block;
-    		border:1px solid #ddd;
+    		
+    	}
+    	
+    	.swiper-slide .data{
+    		background-color: #3A9CFD;
     	}
     	.time{
     		width:100%;
     		line-height: 50px;
-    		text-align: center;
+    		text-align:left;
+    		font-size: 22px;
+    		color: #3A9CFD;
+    		padding-left: 20px;
+    		box-sizing: border-box;
     	}
     	.name{
     		width:100%;
+    		position: initial;
     		line-height: 50px;
-    		text-align: center;	
+    		padding-left: 20px;
+    		box-sizing: border-box;
+    		text-align: left;
+    		color:#424141;
+    		font-size: 18px;
+    		font-weight: bold;	
     	}
     	.teacher{
-    		width:100%;
     		line-height: 50px;
-    		text-align: center;	
+    		text-align: left;
+    		padding-left: 20px;
+    		color: #5d5555;
+    		font-size: 14px;
+
     	}
     	.list:hover{
-    		box-shadow: 0px 1px 15px #ddd;;
+    		box-shadow: 0px 1px 15px #000;;
     	}
     	.swiper-button-next{right: 28px}
     	.swiper-button-prev{left: 28px}
+    	.img{
+    		width:20px;
+    		height: 20px;
+    		border-radius: 50%;
+    		vertical-align: middle;
+    		margin-right: 10px;
+    	}
+    	.zbz{
+    		width:46px;
+    		line-height: 2px;
+    		margin-left: 20px;
+    		padding: 5px;
+    		text-align: center;
+    		border:1px solid #52C383;
+    		color: #52C383;
+
+    	}
+    	.wks{
+    		width:46px;
+    		line-height:0px ;
+    		margin-left:20px;
+    		padding: 10px;
+    		text-align: center;
+    		border:1px solid #ddd;
+    		color: #5d5555;
+    	}
+    	.ywc{
+    		width:46px;
+    		line-height: 0px;
+    		margin-left: 20px;
+    		padding: 10px;
+    		text-align: center;
+
+    		border:1px solid #3A9CFD;
+    		color: #3A9CFD;
+    	}
 	</style>
 </head>
 <body>
 	<!-- 导航 -->
 	<iframe src="header.html" width="100%" height="200px"></iframe>
 	<!--  课程表-->
-		<div class="title" id="kcb">课时表</div>
+		<div class="title" id="kcb"></div>
 		<div class="main">
 			 <div class="m1">
 				<div class="swiper-container1">
@@ -133,11 +176,10 @@
 			 </div>
 		</div>
     <script>
-    var aid=window.location.href.split("?")[1].split("=")[1];
     var token=sessionStorage.getItem("aWebtoken");
 		var nick=sessionStorage.getItem("aNickname");
 		console.log(token);
-		if(token=="null"){
+		if(token==null || token==''){
 			$(".login").show();
 			$(".position").hide()
 		}else{
@@ -145,12 +187,10 @@
 			$(".position").show()
 			$(".position span")[0].innerText=nick;
 		}
-		function bg3(){
-			var r=Math.floor(Math.random()*256);
-			var g=Math.floor(Math.random()*256);
-			var b=Math.floor(Math.random()*256);
-			return "rgb("+r+','+g+','+b+")";//所有方法的拼接都可以用ES6新特性`其他字符串{$变量名}`替换
-		}
+		$(".sign_out").click(function(){
+    		sessionStorage.clear();
+    	 	location.reload() 
+    	})
 		function toRoom(e){
 			var aid=$(e)[0].dataset.aid;
 			window.location.href="chatroom.html?aid="+aid;
@@ -179,7 +219,7 @@
 		}
 		var page=0;
    	$.ajax({
-		url:'http://47.104.18.202:8080/saxophone/saxo/classdeailed?webtoken='+token+"&page="+page+'&aclassid='+aid,
+		url:'http://47.104.18.202:8080/saxophone/saxo/classdeailed?webtoken='+token+"&page="+page,
 		dataType:'jsonp',  
         jsonp:'callback', 
 		async:false,
@@ -194,32 +234,46 @@
 				}
 				var w2=w1.unique3();
 				console.log(w2);
+				var num;
+				if(w2.length>7){
+					num=7;
+				}else if(w2.length<7){
+					num=w2.length;
+				}
 				$("#swiper-wrapper")[0].innerHTML="";
+				var color=["#3A9CFD","#45A4FD","#53AEFD","#69BCFC","#7BC9FD","#48b3ef","#80cbf5"];
+				var int=0;
 				for(var i=0;i<w2.length;i++){
 					console.log("111111");
-					$("#swiper-wrapper").append('<div class="swiper-slide"><div class="data"><p class="xq">'+w2[i].split(" ")[0]+'</p><p class="rq">'+w2[i].split(" ")[1]+'</p></div></div>');
+					var time=w2[i].split(" ")[1].split("-")[1].split("0")[1]+"月"+w2[i].split(" ")[1].split("-")[2]+"日";
+					console.log(time)
+					if(int==7){
+						int=0;
+					}
+					$("#swiper-wrapper").append('<div class="swiper-slide"><div class="data" style="background-color:'+color[int]+'"><p class="xq">'+w2[i].split(" ")[0]+'</p><p class="rq">'+time+'</p></div></div>');
+					int++;
 					var swiper = new Swiper('.swiper-container1', {
 						prevButton:'.swiper-button-prev',
 						nextButton:'.swiper-button-next',
 						paginationClickable: true,
-						slidesPerView:5,
-						spaceBetween: 20,
+						slidesPerView:num,
+						spaceBetween: 0,
 						breakpoints: {
 							1024: {
 							    slidesPerView: 4,
-							    spaceBetween: 40
+							    spaceBetween:0
 							},
 							768: {
 							    slidesPerView: 3,
-							    spaceBetween: 30
+							    spaceBetween:0
 							},
 							640: {
 							    slidesPerView: 2,
-							    spaceBetween: 20
+							    spaceBetween:0
 							},
 							320: {
 							    slidesPerView: 1,
-							    spaceBetween: 10
+							    spaceBetween:0
 							}
 						},
 						onTouchEnd: function(swiper){
@@ -240,29 +294,35 @@
 										console.log(w2);
 										for(var i=0;i<w2.length;i++){
 											console.log("111111");
-											$("#swiper-wrapper").append('<div class="swiper-slide"><div class="data"><p class="xq">'+w2[i].split(" ")[0]+'</p><p class="rq">'+w2[i].split(" ")[1]+'</p></div></div>');
+											var time=w2[i].split(" ")[1].split("-")[1].split("0")[1]+"月"+w2[i].split(" ")[1].split("-")[2]+"日";
+											console.log(time)
+											if(int==7){
+												int=0;
+											}
+											$("#swiper-wrapper").append('<div class="swiper-slide"><div class="data" style="background-color:'+color[int]+'"><p class="xq">'+w2[i].split(" ")[0]+'</p><p class="rq">'+time+'</p></div></div>');
+											int++;
 											var swiper = new Swiper('.swiper-container1', {
 												prevButton:'.swiper-button-prev',
 												nextButton:'.swiper-button-next',
 												paginationClickable: true,
-												slidesPerView:5,
-												spaceBetween: 10,
+												slidesPerView:num,
+												spaceBetween:0,
 												breakpoints: {
 													1024: {
 														slidesPerView: 4,
-														spaceBetween: 40
+														spaceBetween: 0
 													},
 													768: {
 														slidesPerView: 3,
-														spaceBetween: 30
+														spaceBetween: 0
 													},
 													640: {
 														slidesPerView: 2,
-														spaceBetween: 20
+														spaceBetween: 0
 													},
 													320: {
 														slidesPerView: 1,
-														spaceBetween: 10
+														spaceBetween: 0
 													}
 												},
 															       
@@ -273,17 +333,13 @@
 											console.log(w2[i]==getMyDay(new Date(res.data[j].aClasstime)));
 											if(w2[i].split(" ")[0]===getMyDay(new Date(res.data[j].aClasstime))){
 												 if(res.data[j].aState==0){
-												 	var ss=$(".swiper-slide")[i];
-												 	$(ss)[0].style.backgroundColor=bg3();
-												 	$(ss).append('<div class="list"><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p><p class="name">'+res.data[j].aClassname+'</p><p class="teacher">讲师：'+res.data[j].aNickname+'</p></div>')
+												 	$(ss).append('<div class="list"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher wks">未开始</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
 												 }else if(res.data[j].aState==1){
 												 	var ss=$(".swiper-slide")[i];
 												 		$(ss)[0].style.backgroundColor=bg3();
-												 	$(ss).append('<div class="list" onclick="toRoom(this)" data-aid="'+res.data[j].aUserid+'"><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p><p class="name">'+res.data[j].aClassname+'</p><p class="teacher">讲师：'+res.data[j].aNickname+'</p><p class="teacher">正在直播</p></div>')
+												 	$(ss).append('<div class="list" onclick="toRoom(this)" data-aid="'+res.data[j].aUserid+'"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher zbz">直播中</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
 												 }else if(res.data[j].aState==2){
-												 	var ss=$(".swiper-slide")[i];
-												 		$(ss)[0].style.backgroundColor=bg3();
-												 	$(ss).append('<div class="list"><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p><p class="name">'+res.data[j].aClassname+'</p><p class="teacher">讲师：'+res.data[j].aNickname+'</p><p class="teacher">直播完成</p></div>')
+												 	$(ss).append('<div class="list"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher ywc">直播完成</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
 												}
 											}
 										}
@@ -302,16 +358,13 @@
 							if(w2[i].split(" ")[0]===getMyDay(new Date(res.data[j].aClasstime))){
 								if(res.data[j].aState==0){
 									var ss=$(".swiper-slide")[i];
-										$(ss)[0].style.backgroundColor=bg3();
-									$(ss).append('<div class="list"><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p><p class="name">'+res.data[j].aClassname+'</p><p class="teacher">讲师：'+res.data[j].aNickname+'</p><p class="teacher">未开始</p></div>')
+									$(ss).append('<div class="list"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher wks">未开始</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
 								}else if(res.data[j].aState==1){
 									var ss=$(".swiper-slide")[i];
-										$(ss)[0].style.backgroundColor=bg3();
-									$(ss).append('<div class="list" onclick="toRoom(this)" data-aid="'+res.data[j].aUserid+'"><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p><p class="name">'+res.data[j].aClassname+'</p><p class="teacher">讲师：'+res.data[j].aNickname+'</p><p class="teacher">正在直播</p></div>')
+									$(ss).append('<div class="list" onclick="toRoom(this)" data-aid="'+res.data[j].aUserid+'"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher zbz">正在直播</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
 								}else if(res.data[j].aState==2){
 									var ss=$(".swiper-slide")[i];
-										$(ss)[0].style.backgroundColor=bg3();
-									$(ss).append('<div class="list"><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p><p class="name">'+res.data[j].aClassname+'</p><p class="teacher">讲师：'+res.data[j].aNickname+'</p><p class="teacher">直播完成</p></div>')
+									$(ss).append('<div class="list"><p class="name">'+res.data[j].aClassname+'</p><p class="teacher"><img class="img" src="'+res.data[j].aPortrait+'" alt="" />'+res.data[j].aNickname+'</p><p class="teacher ywc">直播完成</p><p class="time">'+res.data[j].aBegintime+'~'+res.data[j].aEndtime+'</p></div>')
 								}
 							}
 						}

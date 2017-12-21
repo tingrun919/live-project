@@ -12,7 +12,7 @@ queryExcellence();
 //查询当前首页显示的推荐视频的介绍和封面
 function queryExcellence(){
     $.ajax({
-        url:'http://47.94.251.233:8080/saxophone/saxo/selectmain?token='+token,
+        url:'http://47.104.18.202:8080/saxophone/saxo/selectmain?token='+token,
         dataType:"jsonp",
         success:function(data){
             console.log(data);
@@ -113,7 +113,7 @@ function queryExcellence(){
 //查询讲师(按照签到量排序)并显示
 $.ajax({
     dataType:'jsonp',
-    url:'http://47.94.251.233:8080/saxophone/saxo/lqeeManager?token='+token+'&state='+2,
+    url:'http://47.104.18.202:8080/saxophone/saxo/lqeeManager?token='+token+'&state='+2,
     success:function(data){
         console.log(data);
         var datas=data.data;
@@ -145,7 +145,7 @@ function queryVideo(){
     console.log(op1);
     $.ajax({
         async:false,
-        url:'http://47.94.251.233:8080/saxophone/saxo/backgetvideo?token='+token,
+        url:'http://47.104.18.202:8080/saxophone/saxo/backgetvideo?token='+token,
         data:{"aid":op1},
         dataType:'jsonp',
         success:function(data){
@@ -178,7 +178,7 @@ function addVideo(t){
     var pic=0;
     $("#file").change(function() {
         //alert
-        var url = 'http://47.94.251.233:8080/saxophone/saxo/picUpload?token='+token;
+        var url = 'http://47.104.18.202:8080/saxophone/saxo/picUpload?token='+token;
         var formdata = new FormData();
         formdata.append("file", $("#file")[0].files[0]);
         $.ajax({
@@ -215,7 +215,7 @@ function addVideo(t){
         var introduce=document.getElementById("video-describe").value;
         var dataIdex={"name":name,"teacher":op1,"discript":introduce,"type":t,"cover":pic,"vid":op3};
         $.ajax({
-            url:'http://47.94.251.233:8080/saxophone/saxo/addmain?token='+token,
+            url:'http://47.104.18.202:8080/saxophone/saxo/addmain?token='+token,
             dataType:'jsonp',
             data:dataIdex,
             success:function(data){
@@ -241,7 +241,7 @@ function xiugai(a,b,cover,na,des){
     $("#img1").append(im);
     $("#file1").change(function() {
         //alert
-        var url = 'http://47.94.251.233:8080/saxophone/saxo/picUpload?token='+token;
+        var url = 'http://47.104.18.202:8080/saxophone/saxo/picUpload?token='+token;
         var formdata = new FormData();
         formdata.append("file", $("#file1")[0].files[0]);
         $.ajax({
@@ -272,7 +272,7 @@ function xiugai(a,b,cover,na,des){
         var xData={"aid":a,"cover":pic2,"discript":discript,"name":name,"type":b};
         console.log(xData);
         $.ajax({
-            url:'http://47.94.251.233:8080/saxophone/saxo/updatemain?token='+token,
+            url:'http://47.104.18.202:8080/saxophone/saxo/updatemain?token='+token,
             dataType:'jsonp',
             data:xData,
             success:function(data){
@@ -289,7 +289,7 @@ function del(d){
     console.log(d);
     var delData={"aid":d};
     $.ajax({
-        url:'http://47.94.251.233:8080/saxophone/saxo/deletemain?token='+token,
+        url:'http://47.104.18.202:8080/saxophone/saxo/deletemain?token='+token,
         dataType:'jsonp',
         data:delData,
         success:function(data){

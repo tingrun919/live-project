@@ -1,0 +1,91 @@
+@font-face {
+	font-family:lth;
+	src: url(../font/lth.TTF);
+}
+body{background-color: #f1f3f4;font-family: lth　!important;}
+/*.container{background-color: #fff;}*/
+.title_bg{
+	width:100%;
+	color:#000;
+	font-size: 16px;
+	line-height: 32px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+.kc_img{
+	width:100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.kc_name{
+	float: left;
+	min-width: 100px;
+	font-size: 16px;
+	color: #000;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+.kc_number{
+	float: right;
+	color: #93999F;
+	margin-top: 10px;
+	padding-right:10px;
+	text-align: center;
+}
+.kc_time{
+	float: left;
+	color: #93999F;
+	padding:10px;
+	overflow: hidden;
+}
+.col-md-3{
+	border-radius: 10px;
+	padding: 0px;
+	margin-bottom: 20px;
+	background-color: #fff;
+}
+.rl_bg_yellow{
+	float:left;
+	width:40px;
+	height: 40px;
+	background: url(../img/taday.png) no-repeat  top left;
+	background-size: 100%;
+	text-align: center;
+	line-height: 52px;
+	color: #FF6600;
+}
+.rl_bg_blue{
+	float:left;
+	width:40px;
+	height: 40px;
+	background: url(../img/day1.png) no-repeat  top left;
+	background-size: 100%;
+	text-align: center;
+	line-height: 52px;
+	color: #039AFF;
+}
+.rl_bg_green{
+	float:left;
+	width:40px;
+	height: 40px;
+	background: url(../img/day2.png) no-repeat  top left;
+	background-size: 100%;
+	text-align: center;
+	line-height: 52px;
+	color: #33CC66;
+}
+.row{
+	margin-left: 50px;
+}
+.row div{
+	margin-right: 30px;
+	max-width: 230px;
+}
+.img_box{
+	width:230px;
+	height: 155px;
+	overflow: hidden;
+}

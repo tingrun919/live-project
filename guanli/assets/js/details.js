@@ -37,7 +37,7 @@ passCourses2();
 function passCourses(){
     $.ajax({
         dataType:'jsonp',
-        url:'http://47.94.251.233:8080/saxophone/saxo/getsignclass?token='+token+'&astate='+0,
+        url:'http://47.104.18.202:8080/saxophone/saxo/getsignclass?token='+token+'&astate='+0,
         data:{"aid":aId},
         success:function(data){
             console.log(data);
@@ -104,7 +104,7 @@ function passCourses(){
 function passCourses2(){
     $.ajax({
         dataType:'jsonp',
-        url:'http://47.94.251.233:8080/saxophone/saxo/getsignclass?token='+token+'&astate='+1,
+        url:'http://47.104.18.202:8080/saxophone/saxo/getsignclass?token='+token+'&astate='+1,
         data:{"aid":aId},
         success:function(data){
             console.log(data);
@@ -184,7 +184,7 @@ $("#sign-courses-to").click(function(){
         var aId={"aid":s};
         console.log(aId);
         $.ajax({
-            url:'http://47.94.251.233:8080/saxophone/saxo/addallsign?token='+token,
+            url:'http://47.104.18.202:8080/saxophone/saxo/addallsign?token='+token,
             type:'post',
             dataType:'jsonp',
             data:aId,

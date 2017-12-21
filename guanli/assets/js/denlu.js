@@ -7,7 +7,7 @@ $("#login-btn").click(function(){
     console.log(userName);
     console.log(passWord);
     $.ajax({
-        url:'http://47.94.251.233:8080/saxophone/saxo/loginManager?usercode='+userName+'&password='+passWord,
+        url:'http://47.104.18.202:8080/saxophone/saxo/loginManager?usercode='+userName+'&password='+passWord,
         dataType:'jsonp',
         success:function(data){
             var status=data.code;

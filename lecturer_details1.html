@@ -1,0 +1,766 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>讲师介绍—鲲鹏爱乐</title>
+<link href="./css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="css/resect.css">
+<link href="./css/style.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="./js/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" href="./css/swiper.min.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="./js/swiper.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="http://nos.netease.com/vod163/nep.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/index.css">
+	<script src="http://nos.netease.com/vod163/nep.min.js"></script>
+<style type="text/css">
+		.header-profile img{
+			display: block;
+			width:160px;
+			height: 160px;
+		}
+		.header .container1{
+			height: 400px;
+		}
+		.header{
+			background: url(images/dsbj.jpg) no-repeat center center;
+		}
+		.container1{background-color: transparent;height: auto;}
+		.header-profile{
+			position: absolute;
+			left: 50%;
+			bottom:-10%;
+			margin-left: -80px;
+		}
+		.header-top {
+		    text-align: center;
+		    margin-top: 3%;
+		    position: relative;
+		}
+		.about-top p.about-p{
+			line-height: 50px
+		}
+		.about-top p.about-p img{
+			display: block;
+			width: 100%;
+		}
+		.about {
+		    margin: 3em 0;
+		}
+		.exp-devide h4{z-index:999;}
+		 .swiper-slide {
+	        text-align: center;
+	        font-size: 18px;
+	        background: #fff;
+	        display: -webkit-box;
+	        display: -ms-flexbox;
+	        display: -webkit-flex;
+	        display: flex;
+	        -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	        -webkit-justify-content: center;
+	        justify-content: center;
+	        -webkit-box-align: center;
+	        -ms-flex-align: center;
+	        -webkit-align-items: center;
+        	align-items: center;
+        	position: relative;
+   	    }
+   	    .title{
+   	    	width:70%;
+   	    	height: 50px;
+   	    	line-height: 50px;
+   	    	text-align: center;
+   	    	font-size: 24px;
+   	    	color: #000;
+   	    	padding:20px;
+   	    	background-color: #fff;
+   	    	margin: 20px auto;
+
+   	    }
+    	.m1{
+   	    	width:100%;
+	        min-height: 550px;
+	        margin: 0 auto;
+	         position: relative;
+	        background-color: #fff;	
+   	    }
+   	    .swiper-container1 {
+   	    		color: #fff;
+	           	width: 85%;
+			    min-height: 700px;
+			    margin: 0 auto;
+			    background-color: #efeff4;
+			    overflow: hidden;
+			    position: relative;
+			   /* padding-left: 20px;
+			    padding-right: 20px;*/
+    	}
+    	.data{
+    		display: block;
+    		width:100%;
+    		height: 80px;
+    		padding-left: 20px;
+    		box-sizing: border-box;
+    		line-height: 40px;
+			b/*order-bottom: 1px solid #000;*/
+    	}
+    	.data p{ text-align: left; }
+    	.xq{
+    		font-size: 20px;
+    		font-weight: bold;
+    	}
+    	.rq{
+    		font-size: 20px;
+    		font-weight: bold;
+    	}
+    	.list{
+			width:100%;
+			height: auto;
+    		text-align: center;
+			background-color: #fff;
+    		/*
+			border-bottom: 1px solid #000;*/
+
+    	}
+    	.swiper-slide{
+    		background-color: #fff;
+    		display: block;
+    		
+    	}
+    	
+    	.swiper-slide .data{
+    		background-color: #3A9CFD;
+    	}
+    	.time{
+    		width:100%;
+    		line-height: 50px;
+    		text-align:left;
+    		font-size: 22px;
+    		color: #3A9CFD;
+    		padding-left: 20px;
+    		box-sizing: border-box;
+    	}
+    	.name{
+    		width:100%;
+    		position: initial;
+    		line-height: 50px;
+    		padding-left: 20px;
+    		box-sizing: border-box;
+    		text-align: left;
+    		color:#424141;
+    		font-size: 18px;
+    		font-weight: bold;	
+    	}
+    	.teacher{
+    		line-height: 50px;
+    		text-align: left;
+    		padding-left: 20px;
+    		color: #5d5555;
+    		font-size: 14px;
+
+    	}
+    	.list:hover{
+    		box-shadow: 0px 1px 15px #000;;
+    	}
+    	.swiper-button-next{right: 28px}
+    	.swiper-button-prev{left: 28px}
+    	.img{
+    		width:20px;
+    		height: 20px;
+    		border-radius: 50%;
+    		vertical-align: middle;
+    		margin-right: 10px;
+    	}
+    	.zbz{
+    		width:46px;
+    		line-height: 2px;
+    		margin-left: 20px;
+    		padding: 5px;
+    		text-align: center;
+    		border:1px solid #52C383;
+    		color: #52C383;
+
+    	}
+    	.wks{
+    		width:46px;
+    		line-height:0px ;
+    		margin-left:20px;
+    		padding: 10px;
+    		text-align: center;
+    		border:1px solid #ddd;
+    		color: #5d5555;
+    	}
+    	.ywc{
+    		width:46px;
+    		line-height: 0px;
+    		margin-left: 20px;
+    		padding: 10px;
+    		text-align: center;
+
+    		border:1px solid #3A9CFD;
+    		color: #3A9CFD;
+    	}
+    	
+		.wi{
+			width:60%;
+			height: 800px;
+			 position: absolute;
+		    left: 50%;
+		    top: 50px;
+		    margin-left: -30%;
+		    background-color: #fff;
+		}
+		.media{
+			width: 100%;
+		    height: 725px;
+		    margin: 0px auto;
+		}
+		.video-js{width:100%;height:100%;}
+		.loader{
+			width:80px;
+			height: 80px;
+			position: absolute;
+			left: 40%;
+			top:40%;
+		}
+		.close{
+			width:50px;
+			height:50px;
+			position: absolute;
+			right:0px;
+			top:0px;
+			box-sizing: border-box;
+			padding:10px;
+		}
+		.close:hover{
+			background-color: #1296db;
+
+		}
+		#name{
+			width:100%;
+			height: 50px;
+			line-height: 50px;
+			font-size: 16px;
+			text-align:left;
+			padding-left: 20px;
+			box-sizing: border-box;
+			color: #5b5555;
+			font-weight: bold;
+		}
+		.blur {    
+		    -webkit-filter: blur(5px); /* Chrome, Opera */
+		       -moz-filter: blur(5px);
+		        -ms-filter: blur(5px);    
+		            filter: blur(5px);    
+		}
+		.v{cursor: pointer;}
+		.video-js{width:100%;height:100%;}
+		.gz{
+			width: 80px;
+		    height: 40px;
+		    border: 1px solid rgb(10, 218, 228);
+		    color: rgb(10, 218, 228);
+		    font-size: 16px;
+		    line-height: 40px;
+		    text-align: center;
+		    background-color: transparent;
+		    position: absolute;
+		    right: 39%;
+		    top: -22px;
+		}
+		.gz:hover{
+			color: #fff;
+			background-color:  rgb(10, 218, 228);
+		}
+		.bg2{
+			width:100%;
+			height: 30px;
+			position: absolute;
+			left: 0%;
+			bottom:0%;
+			background-color:rgba(0,0,0,0.3);
+		}
+		.zt1{
+			position: absolute;
+			left: 5%;
+			top:5px;
+			color: #fff;
+			font-size: 12px;
+			line-height: 18px;
+			
+		}
+</style>
+<!--- Jquery-->
+<!--- Goog Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<iframe src="header.html" width="100%" height="165px"></iframe>
+	<!-- Header Starts Here -->
+	<div class="header">
+		<div class="container1">
+			<div class="header-profile">
+				<img src="./images/profile.png" alt=""/>
+			</div>
+		</div>
+	</div>
+	<div class="header-top">
+				<h2>讲师名称</h2>
+				<button class="gz">关注</button>
+	</div>
+	<!-- Header Ends Here-->
+	<!--- About Me Starts Here -->
+	
+	<!--- About Me Ends Here -->
+	<!--- Experience Starts Here -->
+	<div class="experience">
+		<div class="container1">
+			<div class="exp-top">
+				<h3 class="top-title">课程表</h3>
+				<span class="line"></span>
+			</div>
+			<div class="m1">
+				<div class="swiper-container1">
+			        <div class="swiper-wrapper" id="swiper-wrapper">
+			            
+							
+			        </div>
+			        <!-- Add Pagination -->
+			       
+		    	</div>
+		    	<div class="swiper-button-prev"></div>
+    			<div class="swiper-button-next"></div>
+			 </div>
+		</div>
+	</div>
+	<div class="about">
+		<div class="container1">
+			<div class="about-top">
+				<h3 class="top-title">讲师介绍</h3>
+				<span class="line"></span>
+				<p class="about-p">讲师个人介绍</p>
+				<div class="clearfix induct"></div>
+			</div>
+			
+		</div>
+	</div>
+	<!--- Experience Ends Here -->
+	<!--- Skills Starts Here -->
+	<div class="skills">
+		<div class="container1">
+			<div class="skills-top">
+				<h3 class="top-title">历史视频</h3>
+				<span class="line"></span>
+				<div class="row skill-grids text-center">
+					<div id="video">
+						<div class="v">
+						<img src="images/zw32.png" alt="" class="zb1">
+						<div class="bg2">
+							<span class="zt1">视频名称</span>
+						</div>
+					</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="skills jl">
+		<div class="container1">
+			<div class="skills-top">
+				<h3 class="top-title">讲师交流群</h3>
+				<span class="line"></span>
+				<div class="row skill-grids text-center">
+					<div class="v">
+						<img src="images/zw32.png" alt="" class="zb1">
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<footer>
+		<div class="main1" style="background-color:#424141">
+			<div class="f_l">
+				<div class="gn">功能</div>
+				<div class="gk"><a href="pay.html">购买课程</a></div>
+				<div class="ck"><a href="syllabus.html">购买课程</a></div>
+				<div class="jl"><a href="lecturer.html">讲师列表</a></div>
+			</div>
+			<div class="f_l">
+				<div class="gn">服务</div>
+				<div class="gk">收费说明</div>
+				<div class="ck">用户注册使用协议</div>
+				<div class="jl">讲师注册使用协议</div>
+			</div>
+			<div class="f_l">
+				<div class="gn">联系我们</div>
+				<div class="gk">办公地址XXXXXX</div>
+				<div class="ck">联系电话XXXXXX</div>
+				<div class="jl">服务邮箱XXXXXX</div>
+			</div>
+		</div>
+		<div class="ic">ICP备案XXXXXXXXXX</div>
+		<div class="bq">鲲鹏爱乐©版权所有</div>
+	</footer>
+	<div class="mask">
+		<div class="wi">
+			<p id="name"></p>
+			<img src="images/close.png" alt="" class="close">
+			<div class="media">
+				<video id="my-video" class="video-js vjs-big-play-centered">
+	    			<source src="http://flv53b28b1b.live.126.net/live/136e3cceb7ba49f198f62262bf1cbcfe.flv?netease=flv53b28b1b.live.126.net" type="video/x-flv">
+				</video>
+			</div>
+		</div>
+	</div>
+	<!--- Footer Ends Here -->
+	<script type="text/javascript">
+
+		function toPosition(){
+			window.location.href="position.html?";	
+		}
+		$(".sign_out").click(function(){
+    	sessionStorage.clear();
+    	 location.reload() 
+    	})
+    	var token=sessionStorage.getItem("aWebtoken");
+		var nick=sessionStorage.getItem("aNickname");
+		var aIfmember=sessionStorage.getItem("aIfmember");
+		console.log(token==null || token=='');
+		if(token==null || token==''){
+			$(".jl").hide();
+			$(".login").show();
+			$(".position").hide();
+			$(".gz").hide();
+		}else{
+			$(".login").hide();
+			$(".position").show()
+			$(".position span")[0].innerText=nick;
+			$(".gz").show();
+			$.ajax({
+        		url:'http://47.104.18.202:8080/saxophone/saxo/teachermain?webtoken='+token+"&aid="+aid,
+        	 	dataType:'jsonp',  
+                jsonp:'callback', 
+                async:false,
+                success: function(res){
+                    console.log(res);
+                    if(res.code==100000){
+                    	if(res.data.iffollow==1){
+                    		$(".gz")[0].innerText="已关注";
+                    	}else{
+                    		$(".gz")[0].innerText="关注";
+                    	}
+                    	$(".t_img")[0].src=res.data.userinfo.aPortrait;
+                    	$(".t_name")[0].innerText=res.data.userinfo.aNickname;
+                    	$(".induct")[0].innerHTML=res.data.userinfo.aDiscript;
+                    }
+                 }
+        	})
+			$(".gz").click(function(){
+	      		if($(this)[0].innerText=="关注"){
+	      			$.ajax({
+	      			url:'http://47.104.18.202:8080/saxophone/saxo/userfollow?webtoken='+token+"&aid="+aid,
+		            dataType:'jsonp',  
+		            jsonp:'callback', 
+		            async:false,
+			            success: function(res){
+			                console.log(res);
+			              	if (res.code==100000) {
+			              		$(".gz")[0].innerText="已关注";
+			              	}
+			            }
+		      		})
+	      		}else{
+	      			$.ajax({
+	      			url:'http://47.104.18.202:8080/saxophone/saxo/delfollow?webtoken='+token+"&aid="+aid,
+		            dataType:'jsonp',  
+		            jsonp:'callback', 
+		            async:false,
+			            success: function(res){
+			                console.log(res);
+			              	if (res.code==100000) {
+			              		$(".gz")[0].innerText="关注";
+			              	}
+			            }
+		      		})
+	      		}
+      		})
+		}
+		if(aIfmember==0){$(".jl").hide()}else if(aIfmember==1){$(".jl").show()}
+		function bg3(){
+			var r=Math.floor(Math.random()*256);
+			var g=Math.floor(Math.random()*256);
+			var b=Math.floor(Math.random()*256);
+			return "rgb("+r+','+g+','+b+")";//所有方法的拼接都可以用ES6新特性`其他字符串{$变量名}`替换
+		}
+		function toRoom(e){
+			var aid=$(e)[0].dataset.aid;
+			window.location.href="chatroom.html?aid="+aid;
+		}
+			function toVideo(e){
+
+			function flashChecker() {  
+			  var hasFlash = 0;　　　　 //是否安装了flash    
+			  var flashVersion = 0;　　 //flash版本    
+			  
+			  if(document.all) {  
+			    var swf = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');  
+			    if(swf) {  
+			      hasFlash = 1;  
+			      VSwf = swf.GetVariable("$version");  
+			      flashVersion = parseInt(VSwf.split(" ")[1].split(",")[0]);  
+			    }  
+			  } else {  
+			    if(navigator.plugins && navigator.plugins.length > 0) {  
+			      var swf = navigator.plugins["Shockwave Flash"];  
+			      if(swf) {  
+			        hasFlash = 1;  
+			        var words = swf.description.split(" ");  
+			        for(var i = 0; i < words.length; ++i) {  
+			          if(isNaN(parseInt(words[i]))) continue;  
+			          flashVersion = parseInt(words[i]);  
+			        }  
+			      }  
+			    }  
+			  }  
+			  return { f: hasFlash, v: flashVersion };  
+			}  
+			  
+			var fls = flashChecker();  
+			var s = "";  
+			if(!fls.f) {  
+			  if(confirm("您的浏览器未安装Flash插件，现在安装？")) {  
+			    window.location.href = "https://get2.adobe.com/cn/flashplayer/";  
+			  }
+			}else{
+				$("body").css("overflow","hidden");
+				$("header").addClass("blur");
+				$(".banner").addClass("blur");
+				$(".title").addClass("blur");
+				$(".title1").addClass("blur");
+				$(".title2").addClass("blur");
+				$(".title3").addClass("blur");
+				$(".lecturer").addClass("blur");
+				$(".syllabus").addClass("blur");
+				$(".skills").addClass("blur");
+				$(".video").addClass("blur");
+				$("footer").addClass("blur");
+			  var aid=$(e)[0].dataset.aid;
+			  console.log();
+			  $("#name")[0].innerText=$(e)[0].children[1].children[0].innerText;
+			$(".mask").show();
+			var width=$(window).width();
+			var height=$(window).height();
+			str = sessionStorage.obj; 
+	    	//重新转换为对象 
+	   		 obj = JSON.parse(str);
+	 		console.info(obj);
+	 		var optione={
+						"controls": true,
+						"autoplay": true,
+						"preload": "auto",
+						 "loop": true,
+						 "width":"100%",
+						 "height": "100%",
+						 "techOrder": ["flash", "html5"],
+						 "streamTimeoutTime": 30 * 1000, 
+						  "bigPlayButton":false,
+					    controlBar: { 
+					        playToggle: true
+					    }	    
+					}
+					
+					var myPlayer = neplayer("my-video", optione);
+					myPlayer.onPlayState(1,function(){
+					    console.log('play');
+					});
+					myPlayer.onPlayState(2,function(){
+					    console.log('pause');
+					});
+					myPlayer.onPlayState(3,function(){
+					    console.log('ended');
+					});
+					myPlayer.onError(function(err){
+			    		console.log(err.errCode);
+			    		console.log(err.errMsg);
+					});
+	 		for(var i=0;i<obj.length;i++){
+				if(aid==obj[i].aId){
+					 // obj[i].video.ret.origUrl
+					 
+					console.log(obj[i].video.ret.origUrl)
+					myPlayer.setDataSource(obj[i].video.ret.origUrl);
+				}
+			}
+	       $(".wi").click(function(event){
+	       	event.stopPropagation(); 
+
+	       })
+	       $(".close").click(function(){
+	       		$(".mask").hide();
+	       		$("body").css("overflow","auto");
+				$("header").removeClass("blur");
+				$(".banner").removeClass("blur");
+				$(".title").removeClass("blur");
+				$(".title1").removeClass("blur");
+				$(".title2").removeClass("blur");
+				$(".title3").removeClass("blur");
+				$(".lecturer").removeClass("blur");
+				$(".syllabus").removeClass("blur");
+				$(".skills").removeClass("blur");
+				$(".video").removeClass("blur");
+				$("footer").removeClass("blur");
+	       })
+	       $(".mask").click(function(){
+				$(this).hide();
+				myPlayer.reset();
+				$("body").css("overflow","auto");
+				$("header").removeClass("blur");
+				$(".banner").removeClass("blur");
+
+				$(".title").removeClass("blur");
+				$(".title1").removeClass("blur");
+				$(".title2").removeClass("blur");
+				$(".title3").removeClass("blur");
+				$(".lecturer").removeClass("blur");
+				$(".syllabus").removeClass("blur");
+				$(".skills").removeClass("blur");
+				$(".video").removeClass("blur");
+				$("footer").removeClass("blur");
+			})	
+			} 
+			
+		
+		}
+		
+	    function getMyDay(date){
+				var week;
+				if(date.getDay()==0) week="周日"
+				if(date.getDay()==1) week="周一"
+				if(date.getDay()==2) week="周二"
+				if(date.getDay()==3) week="周三"
+				if(date.getDay()==4) week="周四"
+				if(date.getDay()==5) week="周五"
+				if(date.getDay()==6) week="周六"
+				return week;
+		}
+		// 47.104.18.202:8080/saxophone/saxo/teachermain?webtoken=3B7DE59D14D0A26B089AB805F8B7061B&aid=10
+		var token =sessionStorage.getItem("aWebtoken");
+		var url=window.location.href;
+		console.log(url);
+		var aid=url.split("?")[1].split("=")[1];
+		Array.prototype.unique3 = function(){
+		 	var res = [];
+		 	var json = {};
+			for(var i = 0; i < this.length; i++){
+		  		if(!json[this[i]]){
+		   			res.push(this[i]);
+		   			json[this[i]] = 1;
+		  		}
+		 }
+		 return res;
+		}
+		$.ajax({
+			async:false,
+			url:"http://47.104.18.202:8080/saxophone/saxo/teachermain?aid="+aid,
+			dataType:'jsonp',  
+        	jsonp:'callback', 
+        	success:function(res){
+        		console.log(res);
+        		// 讲师个人信息
+        		if(res.code==100000){
+
+        			if(res.data.userinfo.aPortrait!=""){
+        				$(".header-profile img")[0].src=res.data.userinfo.aPortrait;
+	        		}else{
+	        			$(".header-profile img")[0].src="images/a.png";
+	        		}
+	        		$(".header-top h2")[0].innerText=res.data.userinfo.aNickname;
+	        		if(res.data.userinfo.aDiscript==""){
+	        		 	$(".about-p")[0].innerText="暂无个人介绍"
+	        		 }else{
+	        		 	$(".about-p")[0].innerHTML=res.data.userinfo.aDiscript;
+	        		}
+	        		var w1=[];
+	        		$("#video")[0].innerHTML="";
+	        		for (var i=1;i<res.data.classes.length;i++){
+						// 判断时间
+						 w1.push(getMyDay(new Date(res.data.classes[i].aClasstime))+" "+res.data.classes[i].aClasstime);
+					}
+	        		for (var i=1;i<res.data.video.length;i++){
+						// 判断时间
+						 $("#video").append('<div class="v"  data-aid="'+res.data.video[i].origUrl+'" onclick="toVideo(this)" ><img src="'+res.data.video[i].snapshotUrl+'" alt="" class="zb1"><div class="bg2"><span class="zt1">'+res.data.video[i].videoName+'</span></div></div>')
+	        		
+						
+					}
+					var w2=w1.unique3();
+					console.log(w2);
+					$("#swiper-wrapper")[0].innerHTML="";
+					for(var i=0;i<w2.length;i++){
+							console.log("111111");
+							$("#swiper-wrapper").append('<div class="swiper-slide"><div class="data"><p class="xq">'+w2[i].split(" ")[0]+'</p><p class="rq">'+w2[i].split(" ")[1]+'</p></div></div>');
+							var swiper = new Swiper('.swiper-container1', {
+						        prevButton:'.swiper-button-prev',
+								nextButton:'.swiper-button-next',
+						        paginationClickable: true,
+						        slidesPerView:5,
+						        spaceBetween: 20,
+						        breakpoints: {
+						            1024: {
+						                slidesPerView: 4,
+						                spaceBetween: 40
+						            },
+						            768: {
+						                slidesPerView: 3,
+						                spaceBetween: 30
+						            },
+						            640: {
+						                slidesPerView: 2,
+						                spaceBetween: 20
+						            },
+						            320: {
+						                slidesPerView: 1,
+						                spaceBetween: 10
+						            }
+						        }
+						    });
+					}
+					for(var i=0;i<w2.length;i++){
+						for(var j=0;j<res.data.classes.length;j++){
+							console.log(w2[i]==getMyDay(new Date(res.data.classes[j].aClasstime)));
+							if(w2[i].split(" ")[0]===getMyDay(new Date(res.data.classes[j].aClasstime))){
+								if(res.data.classes[j].aState==0){
+												 	var ss=$(".swiper-slide")[i];
+												 	$(ss)[0].style.backgroundColor=bg3();
+												 	$(ss).append('<div class="list"><p class="time">'+res.data.classes[j].aBegintime+'~'+res.data.classes[j].aEndtime+'</p><p class="name">'+res.data.classes[j].aClassname+'</p><p class="teacher">讲师：'+res.data.classes[j].aNickname+'</p><p class="teacher">未直播</p></div>')
+												 }else if(res.data.classes[j].aState==1){
+												 	var ss=$(".swiper-slide")[i];
+												 		$(ss)[0].style.backgroundColor=bg3();
+												 	$(ss).append('<div class="list" onclick="toRoom(this)" data-aid="'+res.data.classes[j].aUserid+'"><p class="time">'+res.data.classes[j].aBegintime+'~'+res.data.classes[j].aEndtime+'</p><p class="name">'+res.data.classes[j].aClassname+'</p><p class="teacher">讲师：'+res.data[j].aNickname+'</p><p class="teacher">正在直播</p></div>')
+												 }else if(res.data.classes[j].aState==2){
+												 	var ss=$(".swiper-slide")[i];
+												 		$(ss)[0].style.backgroundColor=bg3();
+												 	$(ss).append('<div class="list"><p class="time">'+res.data.classes[j].aBegintime+'~'+res.data.classes[j].aEndtime+'</p><p class="name">'+res.data.classes[j].aClassname+'</p><p class="teacher">讲师：'+res.data.classes[j].aNickname+'</p><p class="teacher">直播完成</p></div>')
+												}
+							}
+						}
+					}
+
+	        		
+        		}
+        		// 讲师课程表
+        	}
+		})
+		
+	</script>
+</body>
+</html>
+
+
+

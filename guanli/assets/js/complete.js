@@ -17,7 +17,7 @@ function completePay(){
     console.log(start_time,end_time,complete_order);
     $.ajax({
         dataType:'jsonp',
-        url:'http://47.94.251.233:8080/saxophone/saxo/ordermanager?token='+token+'&state='+1,
+        url:'http://47.104.18.202:8080/saxophone/saxo/ordermanager?token='+token+'&state='+1,
         data:{"begintime":start_time,"endtime":end_time,"ordercode":complete_order},
         success:function(data){
             console.log(data);

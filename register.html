@@ -87,7 +87,7 @@
 		console.log($(this));
 		var tele=$("#tele").val();
 		$.ajax({
-			url:"http://47.94.251.233:8080/saxophone/saxo/getPCMsgCode?phone="+tele,
+			url:"http://47.104.18.202:8080/saxophone/saxo/getPCMsgCode?phone="+tele,
 			async : false,
  			dataType:'jsonp',  
         	jsonp:'callback', 
@@ -108,7 +108,7 @@
 		var password = $("#password").val();
 		var verify = $("#verify").val();
 		$.ajax({
-		url: 'http://47.94.251.233:8080/saxophone/saxo/rigesterPC',
+		url: 'http://47.104.18.202:8080/saxophone/saxo/rigesterPC',
 		type: 'post',
 		dataType:'jsonp',  
         jsonp:'callback', 

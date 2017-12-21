@@ -240,7 +240,7 @@
 		sessionStorage.setItem("payment","1");
 		var token=sessionStorage.getItem('aWebtoken');
 		$.ajax({
-			url:'http://47.94.251.233:8080/saxophone/saxo/seachrecharge?webtoken='+token,
+			url:'http://47.104.18.202:8080/saxophone/saxo/seachrecharge?webtoken='+token,
 			dataType:'jsonp',  
         	jsonp:'callback', 
 			async:false,
@@ -282,13 +282,13 @@
 			sessionStorage.setItem("payment","2");
 		})
 		$(".btn1").click(function(){
-			if(token==null){
+			if(token==null || token==''){
 				alert("请登录后购买");
 			}else{
 				var aid=sessionStorage.getItem("payId");
 				var payment=sessionStorage.getItem("payment");
 				$.ajax({
-					url:"http://47.94.251.233:8080/saxophone/saxo/setOrder?webtoken="+token+"&aid="+aid+"&payment="+payment,
+					url:"http://47.104.18.202:8080/saxophone/saxo/setOrder?webtoken="+token+"&aid="+aid+"&payment="+payment,
 					dataType:'jsonp',  
 		        	jsonp:'callback', 
 					async:false,

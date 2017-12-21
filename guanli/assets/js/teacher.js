@@ -14,7 +14,7 @@ notPass();
 function teacher(){
     $.ajax({
         dataType:'jsonp',
-        url:'http://47.94.251.233:8080/saxophone/saxo/lqeeManager?token='+token+'&state='+1,
+        url:'http://47.104.18.202:8080/saxophone/saxo/lqeeManager?token='+token+'&state='+1,
         success:function(data){
             console.log(data);
             var datas=data.data;
@@ -80,7 +80,7 @@ $("#pass-audit").click(function(){
         var aId={"aid":s};
         console.log(aId);
         $.ajax({
-            url:'http://47.94.251.233:8080/saxophone/saxo/lqsuccessManager?token='+token,
+            url:'http://47.104.18.202:8080/saxophone/saxo/lqsuccessManager?token='+token,
             type:'post',
             dataType:'jsonp',
             data:aId,
@@ -111,7 +111,7 @@ $("#reject-submit").click(function(){
         var aId={"aid":s,"reason":reason};
         console.log(aId);
         $.ajax({
-            url:'http://47.94.251.233:8080/saxophone/saxo/lqfailManager?token='+token,
+            url:'http://47.104.18.202:8080/saxophone/saxo/lqfailManager?token='+token,
             type:'post',
             dataType:'jsonp',
             data:aId,
@@ -131,7 +131,7 @@ function passTeacher(){
     $.ajax({
         dataType:'jsonp',
         async:false,
-        url:'http://47.94.251.233:8080/saxophone/saxo/lqeeManager?token='+token+'&state='+2,
+        url:'http://47.104.18.202:8080/saxophone/saxo/lqeeManager?token='+token+'&state='+2,
         success:function(data){
             console.log(data);
             var datas=data.data;
@@ -195,7 +195,7 @@ function teaCode(de){
     var pic=0;
     $("#file").change(function() {
         //alert
-        var url = 'http://47.94.251.233:8080/saxophone/saxo/picUpload?token='+token;
+        var url = 'http://47.104.18.202:8080/saxophone/saxo/picUpload?token='+token;
         var formdata = new FormData();
         formdata.append("file", $("#file")[0].files[0]);
         $.ajax({
@@ -225,7 +225,7 @@ function teaCode(de){
         dataCode={"aid":de,"code":pic};
         console.log(dataCode);
         $.ajax({
-            url:'http://47.94.251.233:8080/saxophone/saxo/teaqrcode?token='+token,
+            url:'http://47.104.18.202:8080/saxophone/saxo/teaqrcode?token='+token,
             dataType:'jsonp',
             data:dataCode,
             type:'post',
@@ -244,7 +244,7 @@ function teaCode(de){
 function notPass(){
     $.ajax({
         dataType:'jsonp',
-        url:'http://47.94.251.233:8080/saxophone/saxo/lqeeManager?token='+token+'&state='+3,
+        url:'http://47.104.18.202:8080/saxophone/saxo/lqeeManager?token='+token+'&state='+3,
         success:function(data){
             console.log(data);
             var datas=data.data;
@@ -313,7 +313,7 @@ $("#delete-submit").click(function(){
         var aId={"aid":s,"reason":deReason};
         console.log(aId);
         $.ajax({
-            url:'http://47.94.251.233:8080/saxophone/saxo/delsuccesstea?token='+token,
+            url:'http://47.104.18.202:8080/saxophone/saxo/delsuccesstea?token='+token,
             type:'post',
             dataType:'jsonp',
             data:aId,

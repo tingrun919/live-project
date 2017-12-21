@@ -1,123 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>讲师列表-鲲鹏爱乐</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="./css/resect.css">
-	<link rel="stylesheet" href="css/index.css">
-	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-	<style type="text/css">
-		body{
-			width:100%;
-			height:100%;
-			/*background: url(images/bg.png) left top repeat;
-*/		}
-		header,.container{background-color: #fff;}
-
-		.main{min-height:600px;padding:20px;}
-		.lecturer{min-height: 600px;margin-top:0px;}
-		.title{
-			height: 88px;
-   	    	background:url(images/jslb.png) no-repeat center center;
-   	    	background-size: 100% 100%;
-   	    }
-   	    .list{
-   	    	cursor: pointer;
-
-   	    }
-   	    .list:hover{
-			box-shadow: 4px 4px 4px #ddd;
-   	    }
-   	    .wenben{
-   	    	display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp:3;
-			overflow: hidden;
-			font-size: 12px;
-			line-height: 18px;
-			padding-left: 10px;
-			padding-right: 10px;
-   	    }
-	</style>
+	<meta charset="utf-8" />
+	<title>课时表</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/teacher.css" />
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
+
 <body>
-	<!-- 导航 -->
-	<iframe src="header.html" width="100%" height="200px"></iframe>
-	<div class="title"></div>	
-	<div class="lecturer">
-		<div class="main" id="lecturer">
-			
-		</div>
-		</div>
-		<footer>
-		<div class="main1" style="background-color:#424141">
-			<div class="f_l">
-				<div class="gn">功能</div>
-				<div class="gk"><a href="pay.html">购买课程</a></div>
-				<div class="ck"><a href="syllabus.html">购买课程</a></div>
-				<div class="jl"><a href="lecturer.html">讲师列表</a></div>
-			</div>
-			<div class="f_l">
-				<div class="gn">服务</div>
-				<div class="gk">收费说明</div>
-				<div class="ck">用户注册使用协议</div>
-				<div class="jl">讲师注册使用协议</div>
-			</div>
-			<div class="f_l">
-				<div class="gn">联系我们</div>
-				<div class="gk">办公地址XXXXXX</div>
-				<div class="ck">联系电话XXXXXX</div>
-				<div class="jl">服务邮箱XXXXXX</div>
+	<iframe src="header.html" width="100%" height="165px"></iframe>
+	<div class="title">
+		<div class="container">
+			<div class="ke">
+				<div class="row">
+
+				</div>
 			</div>
 		</div>
-		<div class="ic">ICP备案XXXXXXXXXX</div>
-		<div class="bq">鲲鹏爱乐©版权所有</div>
-	</footer>
-		<script type="text/javascript">
-			var token=sessionStorage.getItem("aWebtoken");
-		var nick=sessionStorage.getItem("aNickname");
-		console.log(token);
-		if(token==null){
-			$(".login").show();
-			$(".position").hide()
-		}else{
-			$(".login").hide();
-			$(".position").show()
-			$(".position span")[0].innerText=nick;
+	</div>
+	<script>
+		function toLecturer(e) {
+			var aid = $(e)[0].dataset.aid;
+			window.location.href = "lecturer_details.html?aid=" + aid;
 		}
-		 $(".sign_out").click(function(){
-    		sessionStorage.clear();
-    	 	location.reload() 
-   		 })
-			function toLecturer (e){
-				var aid=$(e)[0].dataset.aid;
-				window.location.href="lecturer_details.html?aid="+aid;
-			}
-			$.ajax({
-			url:"http://47.94.251.233:8080/saxophone/saxo/lqee",
-			dataType:'jsonp',  
-        	jsonp:'callback', 
-			async:false,
-			success: function(res){
+		$.ajax({
+			url: "http://47.104.18.202:8080/saxophone/saxo/lqee",
+			dataType: 'jsonp',
+			jsonp: 'callback',
+			async: false,
+			success: function (res) {
 				console.log(res);
-				if(res.code==100000){
-					$("#lecturer")[0].innerHTML="";
+				if (res.code == 100000) {
+					$(".row")[0].innerHTML = "";
 					console.log(res);
-						for(var i=0;i<res.data.length;i++){
-						if(res.data[i].aPortrait!=""){
-							$("#lecturer").append('<div class="list" data-aid="'+res.data[i].aId+'" onclick="toLecturer(this)"><div class="list_bg"></div><img  src="'+res.data[i].aPortrait+'" alt="" class="list_te_img"><div class="list_js"><div class="list_js_name">'+res.data[i].aNickname+'</div><div class="describe"><p class="wenben">'+res.data[i].aDiscript+'</p></div><div class="learn">'+res.data[i].signnumber+'人学习</div></div></div>')	
-						}else{
-							$("#lecturer").append('<div class="list" data-aid="'+res.data[i].aId+'" onclick="toLecturer(this)" ><div class="list_bg"></div><img src="images/a.png" alt="" class="list_te_img"><div class="list_js"><div class="list_js_name">'+res.data[i].aNickname+'</div><div class="describe"><p class="wenben">'+res.data[i].aDiscript+'</p></div><div class="learn">'+res.data[i].signnumber+'人学习</div></div></div>')
+					for (var i = 0; i < res.data.length; i++) {
+						if (res.data[i].aPortrait != "") {
+							$(".row").append('<div class="col-xs-12 col-sm-4 col-md-3" data-aid="' + res.data[i].aId + '" onclick="toLecturer(this)"><div class="img_box"><img src="' + res.data[i].aPortrait + '" class="kc_img"/></div>	<span class="kc_name">' + res.data[i].aNickname + '</span><span class="kc_number">' + res.data[i].signnumber + '人学习</span><p class="kc_time">讲师简介(暂无数据)</p></div>')
+						} else {
+							$(".row").append('<div class="col-xs-12 col-sm-4 col-md-3" data-aid="' + res.data[i].aId + '" onclick="toLecturer(this)"><div class="img_box"><img src="img/123.jpg" class="kc_img"/></div><span class="kc_name">' + res.data[i].aNickname + '</span><span class="kc_number">' + res.data[i].signnumber + '人学习</span><p class="kc_time">讲师简介(暂无数据)</p></div>')
 						}
-						
+
 					}
-				}else{
+				} else {
 					alert(res.message);
 				}
-				
+
 			},
 		})
-		</script>
+	</script>
 </body>
-</html> 
+
+</html>

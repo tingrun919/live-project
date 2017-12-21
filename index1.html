@@ -384,8 +384,8 @@
 		var token=sessionStorage.getItem("aWebtoken");
 		var nick=sessionStorage.getItem("aNickname");
 		var aIfmember=sessionStorage.getItem("aIfmember");
-		console.log(token==null);
-		if(token==null){
+		console.log(token==null || token=='');
+		if(token==null || token==''){
 			$(".login").show();
 			$(".position").hide()
 		}else{
@@ -398,7 +398,7 @@
 			window.location.href="lecturer_details.html?aid="+aid;
 		}
 		function toRoom(e){
-			if(token==null){
+			if(token==null || token==''){
 				alert("未登录,无法进入");
 			// }else if(aIfmember==0){
 			// 	alert("您不是会员，无法进入观看，请充值");
@@ -557,7 +557,7 @@
 			var token=sessionStorage.getItem("aWebtoken");
 			// 首页设置查询
 			$.ajax({
-				url:'http://47.94.251.233:8080/saxophone/saxo/selectPCmain',
+				url:'http://47.104.18.202:8080/saxophone/saxo/selectPCmain',
 				dataType:'jsonp',  
         		jsonp:'callback', 
 				async:true,
@@ -585,7 +585,7 @@
 		})
 		// 正在进行的直播
     		$.ajax({
-				url:'http://47.94.251.233:8080/saxophone/saxo/maindirect?webtoken='+token,
+				url:'http://47.104.18.202:8080/saxophone/saxo/maindirect?webtoken='+token,
 				dataType:'jsonp',  
         		jsonp:'callback', 
 				async:true,
@@ -632,7 +632,7 @@
 		})
     		// 首页讲师列表
 		$.ajax({
-			url:"http://47.94.251.233:8080/saxophone/saxo/lqee",
+			url:"http://47.104.18.202:8080/saxophone/saxo/lqee",
 			dataType:'jsonp',  
         	jsonp:'callback', 
 			async:true,
@@ -670,7 +670,7 @@
 			},
 		})
 		$.ajax({
-			url:"http://47.94.251.233:8080/saxophone/saxo/mainclass",
+			url:"http://47.104.18.202:8080/saxophone/saxo/mainclass",
 			dataType:'jsonp',  
         	jsonp:'callback', 
 			async:true,

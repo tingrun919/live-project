@@ -7,7 +7,7 @@ var aid=url.split("?")[1].split("=")[1];
 var token=sessionStorage.getItem("aWebtoken");
 var roomId;
 $.ajax({
-	url:'http://47.94.251.233:8080/saxophone/saxo/intodirect?webtoken='+token+"&aid="+aid,
+	url:'http://47.104.18.202:8080/saxophone/saxo/intodirect?webtoken='+token+"&aid="+aid,
 	dataType:'jsonp',  
     jsonp:'callback', 
 	async:false,

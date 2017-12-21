@@ -15,7 +15,7 @@
 				<img src="images/menu.png" alt="">
 			</div>
 			<!-- logo -->
-			<div class="logo" onclick="window.location.href='index. html'">鲲鹏爱乐</div>
+			<div class="logo" onclick="window.location.href='index. html'"></div>
 			<!-- 导航 -->
 			<div class="nav">
 				<ul class="ul">
@@ -54,13 +54,13 @@
 							<span>Lecture list</span>
 						</a>
 					</li>
-					<li class="nav6 " >
+					<!-- <li class="nav6 " >
 						<a href="#" target="_parent"> 
 							<img src="img/bbs.png"/>
 							<span class="name">论坛</span>
 							<span>Forum</span>
 						</a>
-					</li>
+					</li> -->
 					<li class="nav7">
 						<a href="contact-us.html" target="_parent">
 							<img src="img/about_us.png"/>
@@ -90,8 +90,7 @@
 	var token=sessionStorage.getItem("aWebtoken");
 	var nick=sessionStorage.getItem("aNickname");
 	var aIfmember=sessionStorage.getItem("aIfmember");
-	console.log(token==null);
-	if(token==null){	
+	if(token==null || token==''){	
 		$(".login").show();
 		$(".position").hide()
 	}else{
@@ -99,11 +98,43 @@
 		$(".position").show()
 		$(".position span")[0].innerText=nick;
 	}
+
+	// var nick = sessionStorage.getItem("aNickname");
+	// $(".person-nickname span")[0].innerHTML = nick
+	// $(".position").mouseover(function () {
+	// 	$('.person-center').show()
+	// }).mouseleave(function () {
+	// 	$('.person-center').hide()
+	// })
+
+	// $('.person-center').mouseover(function () {
+	// 	$('.person-center').show()
+	// }).mouseleave(function () {
+	// 	$('.person-center').hide()
+	// })
+
+	// $('.personlogout').click(function () {
+	// 	sessionStorage.setItem("aWebtoken", '');
+	// 	window.location.href = "index.html";
+	// })
+
+	// $('.person-time').click(function(){
+	// 	window.location.href = "pay.html";
+	// })
+
+	// $('.person-account').click(function(){
+	// 	window.location.href = "account.html";
+	// })
+
+	// $('.pay-list').click(function(){
+	// 	window.location.href = "paylist.html";
+	// })
+
 	var color=["41bfee","87bd42","f1ab3e","eb6363","63bec6","b598c3","e55927","3a434f"];
 	$(".ul li").hover(function(){
-		console.log($(this)[0].classList[0].split("v")[1]);
+		// console.log($(this)[0].classList[0].split("v")[1]);
 		var index=$(this)[0].classList[0].split("v")[1];
-		console.log($(".nav"+index+".active "));
+		// console.log($(".nav"+index+".active "));
 		var li=$(this).siblings();
 		for(var i=0;i<li.length;i++){
 			$(li[i])[0].style.borderBottom="none";
@@ -127,5 +158,9 @@
 	function toPosition(){
 		window.location.href="position.html?";	
 	}
+	$('.sign_out').click(function(){
+		sessionStorage.setItem("aWebtoken",'');
+		window.location.href="index.html";	
+	})
 </script>
 </html>

@@ -189,7 +189,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		var token=sessionStorage.getItem("aWebtoken");
 		var nick=sessionStorage.getItem("aNickname");
 		console.log(token);
-		if(token==null){
+		if(token==null || token==''){
 			$(".login").show();
 			$(".position").hide()
 		}else{
@@ -204,7 +204,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     	// 个人信息
     	$.ajax({
     		// 192.168.10.141:8080/saxophone/saxo/selectuser?token=adminfsjfjw
-    		url:"http://47.94.251.233:8080/saxophone/saxo/usercenter?webtoken="+token,
+    		url:"http://47.104.18.202:8080/saxophone/saxo/usercenter?webtoken="+token,
     		dataType:'jsonp',  
             jsonp:'callback', 
             async:false,

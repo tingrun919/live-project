@@ -14,7 +14,7 @@ notCourses();
 function courses(){
     $.ajax({
         dataType:'jsonp',
-        url:'http://47.94.251.233:8080/saxophone/saxo/backgetclass?token='+token+'&astate='+0,
+        url:'http://47.104.18.202:8080/saxophone/saxo/backgetclass?token='+token+'&astate='+0,
         success:function(data){
             console.log(data);
             if(data==null||data==""){
@@ -90,7 +90,7 @@ $("#pass-audit-courses").click(function(){
         var aId={"aid":s};
         console.log(aId);
         $.ajax({
-            url:'http://47.94.251.233:8080/saxophone/saxo/clsuccess?token='+token,
+            url:'http://47.104.18.202:8080/saxophone/saxo/clsuccess?token='+token,
             type:'post',
             dataType:'jsonp',
             data:aId,
@@ -120,7 +120,7 @@ $("#reject-submit-courses").click(function(){
         var aId={"aid":s,"reason":reason};
         console.log(aId);
         $.ajax({
-            url:'http://47.94.251.233:8080/saxophone/saxo/classfail?token='+token,
+            url:'http://47.104.18.202:8080/saxophone/saxo/classfail?token='+token,
             type:'post',
             dataType:'jsonp',
             data:aId,
@@ -139,7 +139,7 @@ $("#reject-submit-courses").click(function(){
 function passCourses(){
     $.ajax({
         dataType:'jsonp',
-        url:'http://47.94.251.233:8080/saxophone/saxo/backgetclass?token='+token+'&astate='+1,
+        url:'http://47.104.18.202:8080/saxophone/saxo/backgetclass?token='+token+'&astate='+1,
         success:function(data){
             console.log(data);
             var datas=data.data;
@@ -205,7 +205,7 @@ function passCourses(){
 function notCourses(){
     $.ajax({
         dataType:'jsonp',
-        url:'http://47.94.251.233:8080/saxophone/saxo/backgetclass?token='+token+'&astate='+2,
+        url:'http://47.104.18.202:8080/saxophone/saxo/backgetclass?token='+token+'&astate='+2,
         success:function(data){
             console.log(data);
             var datas = data.data;
@@ -284,7 +284,7 @@ $("#courses-delete-submit").click(function(){
         var aId={"aid":s,"reason":deReason};
         console.log(aId);
         $.ajax({
-            url:'http://47.94.251.233:8080/saxophone/saxo/delsuccessclass?token='+token,
+            url:'http://47.104.18.202:8080/saxophone/saxo/delsuccessclass?token='+token,
             type:'post',
             dataType:'jsonp',
             data:aId,

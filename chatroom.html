@@ -43,7 +43,7 @@
 		}
 		.g-right{
 			width:400px !important;
-			right: 327px;
+			right:0px;
 			background-color: #fff;
 		}
 		.m-room .announcement_title {
@@ -57,7 +57,7 @@
 		    height: 5% !important;
 		}
 		.m-room .chat {
-		    height: 70% !important;
+		    height:60% !important;
 		}
 		.m-room .edit {
 		    height: 6% !important;
@@ -67,31 +67,6 @@
 		}
 		.m-room .member {
 		    height: 70%;
-		}
-		.img_left{
-			position: absolute;
-			left: 0px;
-			top:0px;
-			background:url(images/12.jpg) no-repeat center center;
-			width:38%;
-			height: 100%;
-			-webkit-background-size: 100%;
-			background-size: 100%;
-		}
-		.img_right{
-			position: absolute;
-			right: 0px;
-			top:0px;
-			background:url(images/13.jpg) no-repeat center center;
-			width:38%;
-			height: 100%;
-			-webkit-background-size: 100%;
-			background-size: 100%;
-		}
-		.mas{
-			width:100%;
-			height: 100%;
-			background-color:#333;
 		}
 		.middle{
 			display: none;
@@ -110,7 +85,7 @@
 			width:400px;
 			height:100%;
 			position: absolute;
-			left: 45%;
+			left:0px;
 			top:0px;
 			background-color: #fff;
 		}
@@ -188,28 +163,64 @@
 		}
 		.induct img{width:100%;display:block;}
 		.induct div{display: none;}
-		@media only screen and (min-width:100px) and (max-width: 800px) {
+		@media only screen and (min-width: 721px) and (max-width:1200px) {
+			.m-room .g-right {
+			    width:35% !important;
+			    height: auto;
+			    position: fixed;
+			    right: 0px;
+			    bottom: 0px;
+			}
 			.teacher_info,.img_left{
 				display: none;
+			}
+			.g-left {
+   				width: 65% !important;
+    			height: 100%;
+    			border-right: none;
 			}
 			video{
 				width:300% !important; 
 				object-fit: cover;
 				
 			}
-			.m-room .g-right{
-				width:30%;
-				height: auto;
-				position: absolute;
-				left: 0px;
-				bottom: 0px;
+			.hclts{
+				display: block !important;
 				
 			}
+			.vjs-modal-dialog-content{display: none;}
+		}
+		@media only screen and (min-width: 100px) and (max-width: 720px) {
+			.m-room .g-right {
+				display: none;
+			    width:35% !important;
+			    height: auto;
+			    position: fixed;
+			    right: 0px;
+			    bottom: 0px;
+			}
+			.teacher_info,.img_left{
+				display: none;
+			}
+			.g-left {
+   				width: 100% !important;
+    			height: 100%;
+    			border-right: none;
+			}
+			video{
+				width:300% !important; 
+				object-fit: cover;
+				
+			}
+			.hclts{
+				display: block !important;
+				
+			}
+			.vjs-modal-dialog-content{display: none;}
 		}
 	</style>
 </head>
 <body>
-	<iframe src="header.html" width="100%" height="165px"></iframe>
 	<div class="g-doc">
 		<div class="m-room" id="room">
 			<div class="g-left">
@@ -219,22 +230,18 @@
 					</video>
 				</div>
 				<div class="img_left">
-					<div class="mas">
 						<div class="teacher_info">
 							<img src="" alt="" class="t_img">
 							<p class="t_name"></p>
 							<button class="gz">关注</button>
-							<div class="induct">讲师个人介绍</div>
+							<div class="induct">讲师个人简介(现在暂无简介)</div>
 						</div>
-					</div>
 				</div>
 				<div class="middle status">主播暂时不在！</div>
 				<div class="middle pause">已暂停</div>
-				<div class="meddle end">直播已结束，谢谢观看</div>
-				<div class="img_right">
-					<div class="mas"></div>
-				</div>
+				<div class="middle end">直播已结束，谢谢观看</div>
 			</div>
+			<div class="hclts" style="display: none;"></div>
 			<div class="g-right">
 				<div class="m-status" id="linkStatus">连接中。。。</div>
 				<div class="announcement_title">
@@ -283,8 +290,8 @@
         var token=sessionStorage.getItem("aWebtoken");
 		var nick=sessionStorage.getItem("aNickname");
 		var aIfmember=sessionStorage.getItem("aIfmember");
-		console.log(token==null);
-//		if(token==null){
+		console.log(token==null || token=='');
+//		if(token==null || token==''){
 //			$(".login").show();
 //			$(".position").hide()
 //		}else{
@@ -297,7 +304,7 @@
     	 	window.location.href="index.html"; 
     	})
         $.ajax({
-        	url:'http://47.94.251.233:8080/saxophone/saxo/teachermain?webtoken='+token+"&aid="+aid,
+        	url:'http://47.104.18.202:8080/saxophone/saxo/teachermain?webtoken='+token+"&aid="+aid,
         	 dataType:'jsonp',  
                 jsonp:'callback', 
                 async:false,
@@ -311,13 +318,13 @@
                     	}
                     	$(".t_img")[0].src=res.data.userinfo.aPortrait;
                     	$(".t_name")[0].innerText=res.data.userinfo.aNickname;
-                    	$(".induct")[0].innerHTML=res.data.userinfo.aDiscript;
+//                  	$(".induct")[0].innerHTML=res.data.userinfo.aDiscript;
                     }
                  }
         })
         var addr=[];
         $.ajax({
-                url:'http://47.94.251.233:8080/saxophone/saxo/intodirect?webtoken='+token+"&aid="+aid,
+                url:'http://47.104.18.202:8080/saxophone/saxo/intodirect?webtoken='+token+"&aid="+aid,
                 dataType:'jsonp',  
                 jsonp:'callback', 
                 async:false,
@@ -386,7 +393,7 @@
       	$(".gz").click(function(){
       		if($(this)[0].innerText=="关注"){
       			$.ajax({
-      			url:'http://47.94.251.233:8080/saxophone/saxo/userfollow?webtoken='+token+"&aid="+aid,
+      			url:'http://47.104.18.202:8080/saxophone/saxo/userfollow?webtoken='+token+"&aid="+aid,
 	            dataType:'jsonp',  
 	            jsonp:'callback', 
 	            async:false,
@@ -399,7 +406,7 @@
 	      		})
       		}else{
       			$.ajax({
-      			url:'http://47.94.251.233:8080/saxophone/saxo/delfollow?webtoken='+token+"&aid="+aid,
+      			url:'http://47.104.18.202:8080/saxophone/saxo/delfollow?webtoken='+token+"&aid="+aid,
 	            dataType:'jsonp',  
 	            jsonp:'callback', 
 	            async:false,
@@ -423,7 +430,8 @@
 		var height=$(window).height();
 		console.log(width,height);
 		$(".g-doc")[0].style.width=width+"px";
-		$(".g-doc")[0].style.height=height-100+"px";
+		$(".g-doc")[0].style.height=height+"px";
+		$(".g-right")[0].style.width=width+"px !important";
 		var h1=height-100;
 		var w1=width;
 		

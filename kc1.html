@@ -123,8 +123,8 @@
     	var token=sessionStorage.getItem("aWebtoken");
 		var nick=sessionStorage.getItem("aNickname");
 		var aIfmember=sessionStorage.getItem("aIfmember");
-		console.log(token==null);
-		if(token==null){
+		console.log(token==null || token=='');
+		if(token==null || token==''){
 			$(".login").show();
 			$(".position").hide()
 		}else{
@@ -152,7 +152,7 @@
 			var token=sessionStorage.getItem("aWebtoken");
 			// 首页设置查询
 			$.ajax({
-				url:'http://47.94.251.233:8080/saxophone/saxo/goodclasses?webtoken='+token,
+				url:'http://47.104.18.202:8080/saxophone/saxo/goodclasses?webtoken='+token,
 				dataType:'jsonp',  
         		jsonp:'callback', 
 				async:false,

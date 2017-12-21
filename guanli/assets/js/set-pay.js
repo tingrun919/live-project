@@ -11,7 +11,7 @@ queryPay();
 //查询当前的付费价格和付费介绍
 function queryPay(){
     $.ajax({
-        url:'http://47.94.251.233:8080/saxophone/saxo/selrecharge?token='+token,
+        url:'http://47.104.18.202:8080/saxophone/saxo/selrecharge?token='+token,
         dataType:'jsonp',
         success:function(data){
             console.log(data);
@@ -50,7 +50,7 @@ function queryPay(){
 var pic=0;
 $("#file").change(function() {
     //alert
-    var url = 'http://47.94.251.233:8080/saxophone/saxo/picUpload?token='+token;
+    var url = 'http://47.104.18.202:8080/saxophone/saxo/picUpload?token='+token;
     var formdata = new FormData();
     formdata.append("file", $("#file")[0].files[0]);
     $.ajax({
@@ -89,7 +89,7 @@ $("#set-pay").click(function(){
     console.log(pData);
     $.ajax({
         dataType:'jsonp',
-        url:'http://47.94.251.233:8080/saxophone/saxo/uprecharge?token='+token,
+        url:'http://47.104.18.202:8080/saxophone/saxo/uprecharge?token='+token,
         type:'post',
         data:pData,
         success:function(data){

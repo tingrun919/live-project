@@ -70,7 +70,7 @@
 	})
 	$("#file").change(function(){
 		//alert
-		var url='http://47.94.251.233:8080/saxophone/saxo/picUpload';
+		var url='http://47.104.18.202:8080/saxophone/saxo/picUpload';
 		var formdata=new FormData( ); 
 		formdata.append("file" , $("#file")[0].files[0]);
 		$.ajax({
@@ -103,7 +103,7 @@
 		var password=$("#password").val();
 		console.log(img,password);
 		$.ajax({
-		url:'http://47.94.251.233:8080/saxophone/saxo//editPCuser?token='+token+'&nickname='+password+'&portrait='+img,
+		url:'http://47.104.18.202:8080/saxophone/saxo//editPCuser?token='+token+'&nickname='+password+'&portrait='+img,
 		dataType:'jsonp',  
         jsonp:'callback', 
 		async:false,
